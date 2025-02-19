@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo "<script>alert('User already exists. Please try logging in.'); window.location.href='login.php';</script>";
     } else {
         // Insert new user
-        $sql = "INSERT INTO user_master(name, email, mobile_no, password, reg_no) VALUES('$full_name', '$email', '$mobile_no', '$password', '$key_')";
+        $sql = "INSERT INTO user_master(name, email, mobile_no, password, reg_no,active_flag) VALUES('$full_name', '$email', '$mobile_no', '$password', '$key_','1')";
         echo ''.$sql;
         if ($conn->query($sql)) {
             echo "<script>alert('User Registered successfully.'); window.location.href='index.php';</script>";

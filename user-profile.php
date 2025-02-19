@@ -15,8 +15,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 if($uid=="")
 	{
-		$sql="INSERT INTO address_master(address,country,city,state,pincode,flag) VALUES('$address','$country','$city','$state','$pincode','$shop_rate','$flag')";
-        
+		$sql="INSERT INTO address_master(user_token_id,address,country,city,state,pincode,flag) VALUES('$user_token_id','$address','$country','$city','$state','$pincode','1')";
+        //echo ''.$sql;
 		if($conn->query($sql))
 		{
 		 
@@ -28,9 +28,9 @@ if($uid=="")
 		$sql="UPDATE address_master set address='$address',country='$country',city='$city',state='$state',pincode='$pincode',flag='$flag' where id='$user_token_id'";
 		if($conn->query($sql))
         {
-            ?>
-			   
-		    <?php
+            ?>		  
+            <script>alert("Address Updated Successfully"); window.location.href="user-profile.php"; </script>
+             <?php
         }
 	}										
 			
@@ -199,7 +199,7 @@ if($uid=="")
                                 <h5 class="mt-2">Hello,<?= givedata($conn, "user_master", "reg_no", $user_token_id, "name"); ?></h5>
                                 <ul class="nav flex-column">
                                     <li class="nav-item">
-                                        <a class="nav-link text-dark" data-bs-toggle="pill" href="#addresses">
+                                        <a class="nav-link text-dark active" data-bs-toggle="pill" href="#addresses">
                                             <i class="fas fa-map-marker-alt"></i> My Addresses
                                         </a>
                                     </li>
@@ -214,7 +214,7 @@ if($uid=="")
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link text-dark active" data-bs-toggle="pill" href="#privacy">
+                                        <a class="nav-link text-dark " data-bs-toggle="pill" href="#privacy">
                                             <i class="fas fa-lock"></i> Account privacy
                                         </a>
                                     </li>
@@ -232,7 +232,7 @@ if($uid=="")
                             <div class="content">
                                 <div class="tab-content">
                                     <!-- My Addresses Tab Content -->
-                                    <div class="tab-pane fade" id="addresses">
+                                    <div class="tab-pane fade show active" id="addresses">
                                         <h4>My Addresses</h4>
                                         <!-- Button to add new address -->
                                         <button class="btn btn-primary mb-3" data-bs-toggle="collapse"
@@ -240,7 +240,7 @@ if($uid=="")
 
                                         <!-- Address Form (visible on clicking "Add New Address") -->
                                         <div class="collapse" id="addAddressForm">
-                                            <form>
+                                            <form method="POST">
                                                 <div class="row">
                                                     <div class="col-lg-6 mb-3">
                                                         <label for="houseNo" class="form-label">Address</label>
@@ -283,31 +283,18 @@ if($uid=="")
                                                     <i class="fa-solid fa-house-circle-exclamation fa-1x me-2"></i>
                                                     <div>
                                                         <h6 class="mb-0">Home</h6>
-                                                        <p class="mb-0"><?= givedata($conn, "address_master", "user_token_id", $user_token_id, "address"); ?></p>
+                                                        <b>Address: </b><p class="mb-0"><?= givedata($conn, "address_master", "user_token_id", $user_token_id, "address"); ?></p>
+                                                        <b>City: </b><p class="mb-0"><?= givedata($conn, "address_master", "user_token_id", $user_token_id, "city"); ?></p>
+                                                        <b>State: </b><p class="mb-0"><?= givedata($conn, "address_master", "user_token_id", $user_token_id, "state"); ?></p>
+                                                        <b>Pincode: </b><p class="mb-0"><?= givedata($conn, "address_master", "user_token_id", $user_token_id, "pincode"); ?></p>
                                                     </div>
                                                 </div>
                                                 <div>
-                                                    <button class="btn btn-warning btn-sm" href="add.php?id=<?=$row['user_token_id']?>">Edit</button>
-                                                    <button class="btn btn-danger btn-sm">Delete</button>
+                                                  
                                                 </div>
                                             </div>
 
-                                            <div
-                                                class="address-item d-flex justify-content-between align-items-center mb-2">
-                                                <div class="d-flex align-items-center">
-                                                    <!-- Home Icon with Heading -->
-                                                    <i class="fa-solid fa-house-circle-exclamation fa-1x me-2"></i>
-                                                    <div>
-                                                        <h6 class="mb-0 ">Home</h6>
-                                                        <p class="mb-0"><?= givedata($conn, "address_master", "user_token_id", $user_token_id, "address"); ?></p>
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                    <button class="btn btn-warning btn-sm">Edit</button>
-                                                    <button class="btn btn-danger btn-sm">Delete</button>
-                                                </div>
-                                            </div>
-
+                                            
                                         </div>
                                     </div>
                                     <!-- My Orders Tab Content -->
@@ -321,7 +308,7 @@ if($uid=="")
                                         <p class="text-muted">You can view and manage your E-Gift Cards here.</p>
                                     </div>
                                     <!-- Account Privacy Tab Content -->
-                                    <div class="tab-pane fade show active" id="privacy">
+                                    <div class="tab-pane fade " id="privacy">
                                             <h4>Account Privacy and Policy</h4>
                                             <p class="text-muted">We, i.e. "Blink Commerce Private Limited", are committed
                                                 to protecting the privacy and security of your personal information. Your

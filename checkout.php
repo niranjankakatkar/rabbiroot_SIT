@@ -129,8 +129,8 @@
                     <form method="post" action="PAY/easebuzz.php?api_name=initiate_payment">
                         <input type="hidden" name="txnid" value="<?=generateRandomCHAR_INT(10)?>">
                         <input type="hidden" name="productinfo" value="Rabbiroots"> 
-                        <input type="hidden" name="surl" value="http://localhost/rabbiroot_SIT/index.php">
-                        <input type="hidden" name="furl" value="http://localhost/rabbiroot_SIT/index.php">
+                        <input type="hidden" name="surl" value="http://localhost/rabbiroot_SIT/paymentDone.php">
+                        <input type="hidden" name="furl" value="http://localhost/rabbiroot_SIT/paymentFail.php">
                         <input type="hidden" name="udf1" value="<?=$_SESSION['OID']?>">
                     <div class="large-container">
                         <div class="sec-title centred pb_30">

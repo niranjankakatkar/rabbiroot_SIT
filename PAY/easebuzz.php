@@ -1,6 +1,23 @@
 <?php
+session_start();
     // include file
     include_once('easebuzz-lib/easebuzz_payment_gateway.php');
+
+    include_once('../db_config.php');
+
+
+    $oid = $_SESSION['OID'];
+    $txnid = $_POST['txnid'];
+    $qty=1;
+    $sql="update order_master set transactionID='$txnid',status='pending' where order_id='$oid'";
+    //echo ''.$sql;
+    if($conn->query($sql))
+    {}
+    
+    $sql_="DELETE from cart_master  where flag='0'";
+    if($conn->query($sql_))
+    {}
+
 
     /*
     * Create object for call easepay payment gate API and Pass required data into constructor.
@@ -28,6 +45,8 @@
     *
     */
     if(!empty($_POST) && (sizeof($_POST) > 0)){
+
+       
 
         /*
         * There are three approch to call easebuzz API.
