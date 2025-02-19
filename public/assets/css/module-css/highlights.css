@@ -1,0 +1,214 @@
+
+/** highlights-section **/
+
+.highlights-section{
+  position: relative;
+}
+
+.highlights-section .bg-color{
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 50%;
+  background: #0E0E0E;
+}
+
+.highlights-section .inner-container{
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 35px 50px;
+  padding-bottom: 5px;
+  box-shadow: 0px 0px 90px 0px rgba(0, 0, 0, 0.06);
+  background: #269c53;
+}
+
+.highlights-section .highlights-block-one{
+  float: left;
+  width: 20%;
+}
+
+.highlights-section .shape{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.05;
+}
+
+.highlights-block-one .inner-box{
+  position: relative;
+  display: block;
+  padding: 6px 0px 6px 76px;
+  margin-bottom: 30px;
+}
+
+.highlights-block-one .inner-box .icon-box{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+  transition: all 500ms ease;
+}
+
+.highlights-block-one .inner-box:hover .icon-box{
+  transform: rotateY(180deg);
+}
+
+.highlights-block-one .inner-box h5{
+  position: relative;
+  display: block;
+  font-size: 18px;
+  line-height: 24px;
+  max-width: 160px;
+}
+
+
+.highlights-section.alternat-2 .inner-container{
+
+}
+
+.highlights-section.alternat-2 .highlights-block-one .inner-box h5{
+  color: #fff;
+}
+
+
+/** highlights-style-two **/
+
+.highlights-style-two{
+  position: relative;
+}
+
+.highlights-block-two .inner-box{
+  position: relative;
+  display: block;
+  background: #fff;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+  padding: 24px 20px 24px 130px;
+  margin-bottom: 30px;
+  min-height: 130px;
+}
+
+.highlights-block-two .inner-box .icon-box{
+  position: absolute;
+  display: inline-block;
+  left: 30px;
+  top: 30px;
+  width: 70px;
+  height: 70px;
+  line-height: 66px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.highlights-block-two .inner-box h4{
+  display: block;
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 4px;
+}
+
+.highlights-block-two .inner-box p{
+  line-height: 24px;
+}
+
+
+
+/** rtl-css **/
+
+.rtl .highlights-section .highlights-block-one{
+  float: right;
+}
+
+.rtl .highlights-block-one .inner-box{
+  padding-left: 0px;
+  padding-right: 76px;
+}
+
+.rtl .highlights-block-one .inner-box .icon-box{
+  left: inherit;
+  right: 0px;
+}
+
+/** responsive-css **/
+
+@media only screen and (max-width: 1200px){
+  
+}
+
+@media only screen and (max-width: 991px){
+  .highlights-section .highlights-block-one{
+    width: 33.333%;
+  }
+}
+
+@media only screen and (max-width: 767px){
+  .highlights-section .highlights-block-one{
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 599px){
+  .highlights-section .highlights-block-one{
+    width: 100%;
+  }
+
+  .highlights-section .inner-container{
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media only screen and (max-width: 499px){
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

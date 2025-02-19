@@ -1,0 +1,200 @@
+
+/** discount-section **/
+
+.discount-section{
+  position: relative;
+  padding: 12px 0px;
+}
+
+.discount-section .inner-box{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.discount-section .inner-box p{
+  font-size: 15px;
+}
+
+.discount-section .inner-box p span{
+  font-weight: 700;
+}
+
+.discount-section .inner-box .sub-title{
+  background: #FFAC00;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 4px 13px;
+}
+
+.discount-section .inner-box .cs-countdown{
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.discount-section .inner-box .cs-countdown .count-col{
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 26px;
+  line-height: 26px;
+  border-radius: 35px;
+  z-index: 1;
+  margin-right: 16px;
+  background: rgba(38, 156, 83, 0.15);
+}
+
+.discount-section .inner-box .cs-countdown .count-col:last-child{
+  margin-right: 0px;
+}
+
+.discount-section .inner-box .cs-countdown .count-col h6,
+.discount-section .inner-box .cs-countdown .count-col span{
+  position: relative;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: lowercase;
+}
+
+.discount-section .inner-box .cs-countdown .count-col:after{
+  position: absolute;
+  content: '';
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  top: 8px;
+  right: -9px;
+}
+
+.discount-section .inner-box .cs-countdown .count-col:before{
+  position: absolute;
+  content: '';
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  bottom: 8px;
+  right: -9px;
+}
+
+.discount-section .inner-box .cs-countdown .count-col:last-child:before,
+.discount-section .inner-box .cs-countdown .count-col:last-child:after{
+  display: none;
+}
+
+.discount-section.alternat-2{
+  background: #E9FAEB;
+}
+
+.discount-section.alternat-2 .inner-box p{
+  color: var(--title-color);
+}
+
+.discount-section.alternat-2 .inner-box .sub-title{
+  border-radius: 5px;
+  background: #FF0000;
+}
+
+.discount-section.alternat-2 .inner-box .cs-countdown .count-col{
+  background: #fff;
+  border-radius: 5px;
+}
+
+
+/** rtl-css **/
+
+.rtl .discount-section .inner-box .cs-countdown .count-col{
+  margin-right: 0px;
+  margin-left: 16px;
+}
+
+.rtl .discount-section .inner-box .sub-title{
+  margin-right: 8px;
+  margin-left: 30px;
+}
+
+.rtl .discount-section .inner-box .cs-countdown .count-col:after,
+.rtl .discount-section .inner-box .cs-countdown .count-col:before{
+  right: inherit;
+  left: -9px;
+}
+
+/** responsive-css **/
+
+@media only screen and (max-width: 1200px){
+
+}
+
+@media only screen and (max-width: 991px){
+
+}
+
+@media only screen and (max-width: 767px){
+  .discount-section .inner-box{
+    display: block;
+    text-align: center;
+  }
+
+  .discount-section .inner-box .cs-countdown{
+    justify-content: center;
+  }
+
+  .discount-section .inner-box .sub-title{
+    margin: 0px;
+    margin-bottom: 10px;
+    margin-top: 4px;
+  }
+}
+
+@media only screen and (max-width: 599px){
+  
+}
+
+@media only screen and (max-width: 499px){
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

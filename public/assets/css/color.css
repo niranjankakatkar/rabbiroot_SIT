@@ -1,0 +1,234 @@
+
+
+
+/*********************************** color ******************************************/
+
+.main-menu .navigation > li.current > a,
+.main-menu .navigation > li:hover > a,
+.main-menu .navigation > li > ul > li > a:hover,
+.main-menu .navigation > li > .megamenu li > a:hover,
+.main-menu .navigation > li > ul > li > ul > li > a:hover,
+.scroll-to-top .scroll-bar-text,
+.main-header .outer-box .category-box .category-list > li > a:hover,
+.main-header .outer-box .category-box .list-inner .inner-box .single-column ul li a:hover,
+.main-header .menu-right-content .info-list li a:hover,
+.tabs-box .tab-btns li.active-btn,
+.tabs-box .tab-btns li:hover,
+.shop-block-one .inner-box .lower-content h4 a:hover,
+.shop-block-two .inner-box h5 a:hover,
+.sec-title a:hover,
+.news-block-one .inner-box .lower-content h4 a:hover,
+.news-block-one .inner-box .lower-content .post-info li a:hover,
+.main-footer .footer-widget .info li a:hover,
+.main-footer .links-widget .links-list li a:hover,
+.main-footer .copyright p a,
+.discount-section .inner-box p,
+.discount-section .inner-box .cs-countdown .count-col h6,
+.discount-section .inner-box .cs-countdown .count-col span,
+.offers-block-one .inner-box .timer .cs-countdown .count-col span,
+.deals-block-one .inner-box .content-box .count-col span,
+.deals-block-one .inner-box .content-box .count-col:after,
+.deals-block-one .inner-box .content-box h3 a:hover,
+.category-block-one .inner-box h4 a:hover,
+.news-block-two .inner-box h4 a:hover,
+.news-block-two .inner-box .post-info a:hover,
+.page-title .bread-crumb li a:hover,
+.shop-block-three .inner-box .content-box h4 a:hover,
+.shop-sidebar .search-widget .form-group button[type='submit'],
+.price-range-slider .range-box .reset-btn:hover,
+.shop-sidebar .category-widget .more-text a:hover,
+.shop-sidebar .size-widget .check-box input:checked + label,
+.product-details-content .content-box h6 span,
+.product-details-content .other-option li a:hover,
+.shop-details .product-discription .review-content .single-review .upper-box .option-btn li button:hover,
+.shop-details .product-discription .review-content .single-review .upper-box .option-btn li button:active,
+.shop-details .product-discription .review-content .single-review .upper-box .option-btn li button:focus,
+.shop-details .product-discription .review-content .form-inner .form-group label span,
+.shop-details .product-discription .review-content .customer-review .rating-box p span,
+.cart-section .cart-table tbody .product-column .product-box h6 a:hover,
+.cart-section .total-cart h5,
+.cart-section .total-cart .shipping-address .single-item .icon-box,
+.cart-section .total-cart .shipping-address .single-item p a:hover,
+.checkout-section .billing-content .form-inner .form-group label span,
+.checkout-section .order-info h4,
+.account-section .account-info .author-box a:hover,
+.account-section .account-info .author-info .single-item button:hover,
+.account-section .history-box .single-history .product-box .product-info h6,
+.account-section .history-box .single-history .product-box .product-info h5 a:hover,
+.account-section .account-info p a:hover,
+.account-section .tab-btns li.active-btn,
+.account-section .tab-btns li:hover,
+.about-section .content-box .text-box span,
+.about-section .content-box .funfact-block .count-outer,
+.about-section .inner-box .content-info .single-item h2,
+.sign-section .form-inner .form-group label span,
+.sign-section .form-inner .other-option .forgot-password:hover,
+.sign-section .form-inner .lower-text p a,
+.contact-section .info-box .single-item p a:hover,
+.contact-section .form-inner .form-group label span,
+.blog-sidebar .search-widget .form-group input:focus + button,
+.blog-sidebar .search-widget .form-group button:hover,
+.blog-sidebar .category-widget .category-list li a:hover,
+.blog-sidebar .post-widget .post h6 a:hover,
+.blog-sidebar .deals-widget .inner-box .content-box .timer .cs-countdown .count-col span,
+.blog-sidebar .deals-widget .inner-box .content-box h6 a:hover,
+.blog-sidebar .archives-widget .archives-list li a:hover,
+.news-block-one .inner-box .lower-content h2 a:hover,
+.blog-details-content .content-one blockquote .icon-box,
+.blog-details-content .comment-box .form-inner .form-group label span
+
+{
+  color: var(--theme-color);
+}
+
+
+/** background **/
+
+button.rtl,
+button.ltr,
+.main-header .outer-box .category-box .list-inner .shop-block .link:hover,
+.main-header .outer-box .category-box .category-list > li > a:after,
+.main-header .outer-box .category-box .category-list > li:after,
+.theme-btn.btn-one,
+.shop-block-one .inner-box .image-box .option-list li a:hover,
+.shop-block-one .inner-box .image-box .option-list li button:hover,
+.shop-block-one .inner-box .decore,
+.bootstrap-touchspin .btn.bootstrap-touchspin-up:hover,
+.bootstrap-touchspin .input-group-btn-vertical .bootstrap-touchspin-down:hover,
+.tabs-box .tab-btns li:before,
+.news-block-one .inner-box .lower-content .sub-title,
+.main-footer .footer-widget .form-inner .form-group input:focus + button,
+.main-footer .footer-widget .form-inner .form-group button:hover,
+.main-footer .social-links li a:hover,
+.discount-section .inner-box .cs-countdown .count-col:before,
+.discount-section .inner-box .cs-countdown .count-col:after,
+.discount-section .inner-box .cs-countdown .count-col:before,
+.cta-style-two.home-2 .inner-container .theme-btn:before,
+.cta-style-two.home-2 .inner-container .theme-btn:after,
+.offers-block-one .inner-box .timer .cs-countdown .count-col:after,
+.offers-block-one .inner-box .timer .cs-countdown .count-col:before,
+.deals-block-one .inner-box .image-box .option-list li a:hover,
+.deals-block-one .inner-box .image-box .option-list li button:hover,
+.featured-style-two .shop-block-one .inner-box .image-box .option-list li a:hover, 
+.featured-style-two .shop-block-one .inner-box .image-box .option-list li button:hover,
+.highlights-section.alternat-2 .inner-container,
+.news-block-two .inner-box .sub-title,
+.header-style-four .header-top,
+.main-header .menu-right-content .search-box .form-group input:focus + button,
+.main-header .menu-right-content .search-box .form-group button:hover,
+.pagination li a:hover,
+.pagination li a.current,
+.pagination li a.dot-link:hover,
+.pagination li a.dot-link.current,
+.price-range-slider .ui-slider-range,
+.shop-sidebar .check-box label:after,
+.shop-page-section .item-shorting .left-column .filter-button button,
+.product-details-content .addto-cart-box ul li a:hover,
+.product-details-content .addto-cart-box ul li.like-btn button:hover,
+.product-details-content .addto-cart-box ul li.like-btn button:active,
+.product-details-content .addto-cart-box ul li.like-btn button:focus,
+.product-details-content .content-box .size-list .check-box input:checked + label,
+.product-details-content .content-box .payment-option span,
+.product-details-content .other-option li.social-links a:hover,
+.shop-details .product-discription .tab-btns li.active-btn,
+.list-style-one li:before,
+.check-box-two input:checked + label:before,
+.shop-details .product-discription .customer-review .review-list li .check-box label:after,
+.cart-section .coupon-box .form-group button,
+.cart-section .total-cart .shipping-cost .cost-list li .check-box input:checked + label:after,
+.checkout-section .order-info .payment-option .check-box label:after,
+.account-section .tabs-box .payment-option .check-box label:after,
+.highlights-block-two .inner-box .icon-box,
+.contact-section .info-box .single-item .icon-box,
+.blog-sidebar .deals-widget .inner-box .content-box .timer .cs-countdown .count-col:after,
+.blog-sidebar .deals-widget .inner-box .content-box .timer .cs-countdown .count-col:before,
+.blog-sidebar .tags-widget .tags-list li a:hover,
+.blog-details-content .content-one h4:before,
+.blog-details-content .post-share-option .tags-list li a:hover,
+.blog-details-content .post-share-option .social-links li a:hover
+
+{
+  background: var(--theme-color);
+}
+
+
+
+
+/** border-color **/
+
+.main-menu .navigation > li > ul,
+.main-menu .navigation > li > .megamenu,
+.shop-style-two .shop-block-one .inner-box .image-box .option-list li a:hover, 
+.shop-style-two .shop-block-one .inner-box .image-box .option-list li button:hover,
+.main-footer .footer-widget .form-inner .form-group input:focus,
+.main-footer .footer-card li a:hover,
+.deals-block-one .inner-box .content-box .theme-btn,
+.shop-style-six .shop-block-one .inner-box .image-box .option-list li a:hover, 
+.shop-style-six .shop-block-one .inner-box .image-box .option-list li button:hover,
+.shop-style-seven .shop-block-one .inner-box .image-box .option-list li a:hover, 
+.shop-style-seven .shop-block-one .inner-box .image-box .option-list li button:hover,
+.shop-style-eight .shop-block-one .inner-box .image-box .option-list li a:hover, 
+.shop-style-eight .shop-block-one .inner-box .image-box .option-list li button:hover,
+.main-header .menu-right-content .search-box .form-group input:focus,
+.shop-style-nine .shop-block-one .inner-box .image-box .option-list li a:hover, 
+.shop-style-nine .shop-block-one .inner-box .image-box .option-list li button:hover,
+.shop-page-section .item-shorting .right-column .menu-box button.on,
+.shop-page-section .shop-block-one .inner-box .image-box .option-list li a:hover, 
+.shop-page-section .shop-block-one .inner-box .image-box .option-list li button:hover,
+.pagination li a:hover,
+.pagination li a.current,
+.pagination li a.dot-link:before,
+.shop-block-three .inner-box .cart-content .theme-btn,
+.shop-sidebar .search-widget .form-group input[type='search'],
+.shop-sidebar .check-box input:checked + label:before,
+.shop-sidebar .size-widget .check-box input:checked + label,
+.product-details-content .slider-content .thumb-box li a.active,
+.product-details-content .content-box .size-list .check-box input:checked + label,
+.product-details-content .other-option li.social-links a:hover,
+.shop-details .product-discription .review-content .form-inner .form-group input:focus,
+.shop-details .product-discription .review-content .form-inner .form-group textarea:focus,
+.check-box-two input:checked + label:before,
+.shop-details .product-discription .customer-review .review-list li .check-box input:checked + label,
+.shop-details .product-discription .customer-review .review-list li .check-box input:checked + label:before,
+.cart-section .coupon-box .form-group input:focus,
+.cart-section .total-cart .shipping-cost .cost-list li .check-box input:checked + label:before,
+.checkout-section .billing-content .form-inner .form-group input:focus,
+.checkout-section .order-info .payment-option .check-box input:checked + label:before,
+.account-section .tabs-box .payment-option .check-box input:checked + label:before,
+.sign-section .form-inner .form-group input:focus,
+.sign-section .form-inner .social-links li a:hover,
+.contact-section .form-inner .form-group input:focus,
+.contact-section .form-inner .form-group textarea:focus,
+.blog-sidebar .search-widget .form-group input:focus,
+.blog-sidebar .tags-widget .tags-list li a:hover,
+.blog-details-content .content-one blockquote,
+.blog-details-content .post-share-option .tags-list li a:hover,
+.blog-details-content .post-share-option .social-links li a:hover,
+.blog-details-content .comment-box .form-inner .form-group input:focus,
+.blog-details-content .comment-box .form-inner .form-group textarea:focus
+
+{
+  border-color: var(--theme-color) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

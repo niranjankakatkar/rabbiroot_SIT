@@ -1,0 +1,175 @@
+
+/** testimonial-section **/
+
+.testimonial-section{
+  position: relative;
+}
+
+.testimonial-section .owl-carousel .owl-stage-outer{
+  overflow: visible;
+}
+
+.testimonial-section .owl-carousel .owl-stage-outer .owl-item{
+  opacity: 0;
+  visibility: hidden;
+}
+
+.testimonial-section .owl-carousel .owl-stage-outer .owl-item.active{
+  opacity: 1;
+  visibility: visible;
+}
+
+.testimonial-block-one{
+  margin-top: 40px;
+}
+
+.testimonial-block-one .inner-box{
+  position: relative;
+  display: block;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.07);
+  padding: 50px 30px 42px 30px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.testimonial-block-one .inner-box .thumb-box{
+  position: absolute;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  left: 50%;
+  top: -40px;
+  margin-left: -40px;
+  border-radius: 50%;
+}
+
+.testimonial-block-one .inner-box .thumb-box img{
+  width: 100%;
+  border-radius: 50%;
+}
+
+.testimonial-block-one .inner-box h4{
+  display: block;
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 2px;
+}
+
+.testimonial-block-one .inner-box .designation{
+  position: relative;
+  display: block;
+  font-size: 14px;
+  line-height: 22px;
+  margin-bottom: 20px;
+}
+
+.testimonial-block-one .inner-box .rating{
+  justify-content: center;
+}
+
+.testimonial-block-one .inner-box .rating li.light{
+  color: rgba(0, 0, 0, 0.15);
+}
+
+.testimonial-block-one .inner-box p{
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.testimonial-section .owl-nav{
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  margin-top: -28px;
+  width: 100%;
+}
+
+.testimonial-section .owl-nav .owl-prev{
+  position: absolute;
+  left: -28px;
+  background: #fff;
+  border: 1px solid #E5E5E5;
+  line-height: 50px;
+}
+
+.testimonial-section .owl-nav .owl-next{
+  position: absolute;
+  right: -28px;
+  background: #fff;
+  border: 1px solid #E5E5E5;
+  line-height: 50px;
+}
+
+
+/** rtl-css **/
+
+
+
+/** responsive-css **/
+
+@media only screen and (max-width: 1200px){
+
+}
+
+@media only screen and (max-width: 991px){
+
+}
+
+@media only screen and (max-width: 767px){
+  .testimonial-section .owl-nav{
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 599px){
+  
+}
+
+@media only screen and (max-width: 499px){
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
