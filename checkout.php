@@ -126,6 +126,12 @@
 
                 <!-- checkout-section -->
                 <section class="checkout-section pb_80">
+                    <form method="post" action="PAY/easebuzz.php?api_name=initiate_payment">
+                        <input type="hidden" name="txnid" value="<?=generateRandomCHAR_INT(10)?>">
+                        <input type="hidden" name="productinfo" value="Rabbiroots"> 
+                        <input type="hidden" name="surl" value="http://localhost/rabbiroot_SIT/index.php">
+                        <input type="hidden" name="furl" value="http://localhost/rabbiroot_SIT/index.php">
+                        <input type="hidden" name="udf1" value="<?=$_SESSION['OID']?>">
                     <div class="large-container">
                         <div class="sec-title centred pb_30">
                             <h2>Checkout</h2>
@@ -136,12 +142,12 @@
                                     <div class="billing-content mr_30">
                                         <h3>Billing Details</h3>
                                         <div class="form-inner">
-                                            <form method="post" action="checkout.php">
+                                          
                                                 <div class="row clearfix">
                                                     <div class="col-lg-12 col-md-12 col-sm-12 field-column">
                                                         <div class="form-group">
                                                             <label>Full Name<span>*</span></label>
-                                                            <input type="text" value="<?=givedata($conn,"user_master","reg_no",$_SESSION['tokenID'],"name")?>"  name="fname">
+                                                            <input type="text" value="<?=givedata($conn,"user_master","reg_no",$_SESSION['tokenID'],"name")?>"  name="firstname">
                                                         </div>
                                                     </div>
                                                    
@@ -157,54 +163,30 @@
                                                             <input type="text" value="<?=givedata($conn,"user_master","reg_no",$_SESSION['tokenID'],"mobile_no")?>" name="phone">
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-12 col-md-12 col-sm-12 field-column">
-                                                        <div class="form-group">
-                                                            <label>Country<span>*</span></label>
-                                                            <div class="select-box">
-                                                                <select class="wide">
-                                                                    <option data-display="Select Country">Select Country
-                                                                    </option>
-                                                                    <option value="1">India</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                   
                                                     <div class="col-lg-12 col-md-12 col-sm-12 field-column">
                                                         <div class="form-group">
                                                             <label>Address<span>*</span></label>
-                                                            <input type="text" name="address">
+                                                            <input type="text" value="<?=givedata($conn,"address_master","user_token_id",$_SESSION['tokenID'],"address")?>" name="address">
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6 col-md-6 col-sm-12 field-column">
                                                         <div class="form-group">
                                                             <label>Town / City<span>*</span></label>
-                                                            <input type="text" name="city">
+                                                            <input type="text" value="<?=givedata($conn,"address_master","user_token_id",$_SESSION['tokenID'],"city")?>" name="city">
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6 col-md-6 col-sm-12 field-column">
                                                         <div class="form-group">
                                                             <label>Postcode / ZIP<span>*</span></label>
-                                                            <input type="text" name="zip">
+                                                            <input type="text" value="<?=givedata($conn,"address_master","user_token_id",$_SESSION['tokenID'],"pincode")?>" name="zip">
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-12 col-md-12 col-sm-12 field-column">
-                                                        <div class="form-group">
-                                                            <div class="check-box-two">
-                                                                <input class="check" type="checkbox" id="checkbox1">
-                                                                <label for="checkbox1">Create an account?</label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                    
                                                 </div>
                                             </form>
                                         </div>
-                                        <div class="other-address">
-                                            <h3>Shipping Address</h3>
-                                            <div class="check-box-two">
-                                                <input class="check" type="checkbox" id="checkbox2">
-                                                <label for="checkbox2">Ship to a different address</label>
-                                            </div>
-                                        </div>
+                                       
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-md-12 col-sm-12 order-column">
@@ -257,33 +239,16 @@
                                             <div class="total-box">
                                                 <h4><span>Total</span></h4>
                                                 <h4>Rs. <?=givedata($conn,"order_master","order_id",$oid,"total")?></h4>
+                                                <?php
+                                                $aamt=givedata($conn,"order_master","order_id",$oid,"total");
+                    $amt=number_format( (float) $aamt, 2, '.', '');
+                                                ?>
+                                                <input type="text" name="amount" value="<?=$amt?>">
                                             </div>
                                             <div class="payment-option">
-                                                <span class="text">Selet Your Credit/Debit Cards or Paypal</span>
-                                                <div class="bank-payment">
-                                                    <ul class="card-list clearfix">
-                                                        <li><a href="checkout.php"><img
-                                                                    src="public/assets/images/icons/card-19.png"
-                                                                    alt=""></a></li>
-                                                        <li><a href="checkout.php"><img
-                                                                    src="public/assets/images/icons/card-20.png"
-                                                                    alt=""></a></li>
-                                                        <li><a href="checkout.php"><img
-                                                                    src="public/assets/images/icons/card-21.png"
-                                                                    alt=""></a></li>
-                                                        <li><a href="checkout.php"><img
-                                                                    src="public/assets/images/icons/card-22.png"
-                                                                    alt=""></a></li>
-                                                    </ul>
-                                                </div>
+                                              
                                                 <ul class="other-payment">
-                                                    <li>
-                                                        <div class="check-box mb_12">
-                                                            <input class="check" type="radio" id="checkbox4"
-                                                                name="same">
-                                                            <label for="checkbox4">Cash on Delivery</label>
-                                                        </div>
-                                                    </li>
+                                                    
                                                     <li>
                                                         <div class="check-box mb_12">
                                                             <input class="check" type="radio" id="checkbox5"
@@ -306,6 +271,7 @@
                             </div>
                         </div>
                     </div>
+                                        </form>
                 </section>
                 <!-- checkout-section end -->
 

@@ -2,8 +2,6 @@
     // include file
     include_once('easebuzz-lib/easebuzz_payment_gateway.php');
 
-    include '../niru_collection.php';
-
     /*
     * Create object for call easepay payment gate API and Pass required data into constructor.
     * Get API response.
@@ -30,18 +28,6 @@
     *
     */
     if(!empty($_POST) && (sizeof($_POST) > 0)){
-
-        $oid = $_SESSION['OID'];
-        $txnid = $_POST['txnid'];
-        $qty=1;
-        $sql="update order_master set transactionID='$txnid',status='pending' where order_id='$oid'";
-        if($conn->query($sql))
-		{}
-		
-        $sql_="DELETE from cart_master  where flag='0'";
-		if($conn->query($sql_))
-		{}
-
 
         /*
         * There are three approch to call easebuzz API.
