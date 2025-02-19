@@ -193,7 +193,7 @@ $cat_id_= $_GET['i'];
                                                 </div>
                                                 <div class="lower-content pl_30 pr_20">
                                                     <span class="text"><?=givedata($conn,"category","id",$row['category_id'],"category_title")?></span>
-                                                    <h4><a href="ShopDetails.php"><?=$row['product_title']?></a></h4>
+                                                    <h4><a href="itemDetails.php?i=<?=$row['p_key']?>"><?=$row['product_title']?></a></h4>
                                                     <h5><i class="fa-solid fa-indian-rupee-sign"></i><?=$row['price']?></h5>
                                                    
                                                     <span class="product-stock"><img src="public/assets/images/icons/icon-11.png" alt=""> In Stock</span>
@@ -204,8 +204,7 @@ $cat_id_= $_GET['i'];
                                                                             if ($avlKey != "") {
                                                                                 ?>
                                                                             <button onclick="add_to_cart(`<?= $row['p_key'] ?>`)" id="<?= $row['p_key'] ?>"
-                                                                                style="background-color: #212529 !important;" class="btn btn-md bg-dark cart-button text-white w-100">Go To
-                                                                                Cart</button>
+                                                                                style="background-color: #212529 !important;" class="btn btn-md bg-dark cart-button text-white w-100">Go To Cart</button>
                                                                             <?php
                                                                             } else {
                                                                                 ?>
@@ -226,251 +225,9 @@ $cat_id_= $_GET['i'];
                                     </div>
                                  
                                 </div>
-                                <div class="shop-list-content">
-                                    <div class="shop-block-three">
-                                        <div class="inner-box">
-                                            <div class="image-box">
-                                                <span class="discount-product p_absolute l_0 t_30">6% Off</span>
-                                                <figure class="image"><a href="ShopDetails.php"><img src="public/assets/images/shop/shop-140.png" alt=""></a></figure>
-                                            </div>
-                                            <div class="content-box">
-                                                <h4><a href="ShopDetails.php">Turmeric Powder with 100% Pure Naturally</a></h4>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit facilisi diam, primis dapibus sapien conubia augue enim feugiat.</p>
-                                                <span class="product-stock mb_20"><img src="public/assets/images/icons/icon-11.png" alt=""> In Stock</span>
-                                                <ul class="rating"> 
-                                                    <li><i class="icon-11"></i></li>
-                                                    <li><i class="icon-11"></i></li>
-                                                    <li><i class="icon-11"></i></li>
-                                                    <li><i class="icon-11"></i></li>
-                                                    <li><i class="icon-11"></i></li>
-                                                    <li><span>(4.7)</span></li>
-                                                </ul>
-                                                <div class="progress-box low-stock">
-                                                    <div class="bar mb_10">
-                                                        <div class="bar-inner count-bar" data-percent="20%"></div>
-                                                    </div>
-                                                    <p>Available: <span>20%</span></p>
-                                                </div>
-                                            </div>
-                                            <div class="cart-content">
-                                                <div class="cart-inner">
-                                                    <h3><del class="mr_12"><i class="fa-solid fa-indian-rupee-sign"></i>19.99</del><i class="fa-solid fa-indian-rupee-sign"></i>15.99</h3>
-                                                    <div class="item-quantity-selector">
-                                                        <input class="quantity-spinner" type="text" value="1" name="quantity">
-                                                    </div>
-                                                    <div class="cart-btn"><button type="button" class="theme-btn btn-one">Add to Cart</button></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="shop-block-three">
-                                        <div class="inner-box">
-                                            <div class="image-box">
-                                                <figure class="image"><a href="ShopDetails.php"><img src="public/assets/images/shop/shop-141.png" alt=""></a></figure>
-                                            </div>
-                                            <div class="content-box">
-                                                <h4><a href="ShopDetails.php">Meridian Foods Crunchy Peanut Butter</a></h4>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit facilisi diam, primis dapibus sapien conubia augue enim feugiat.</p>
-                                                <span class="product-stock mb_20"><img src="public/assets/images/icons/icon-11.png" alt=""> In Stock</span>
-                                                <ul class="rating"> 
-                                                    <li><i class="icon-11"></i></li>
-                                                    <li><i class="icon-11"></i></li>
-                                                    <li><i class="icon-11"></i></li>
-                                                    <li><i class="icon-11"></i></li>
-                                                    <li><i class="icon-11"></i></li>
-                                                    <li><span>(5.0)</span></li>
-                                                </ul>
-                                                <div class="progress-box">
-                                                    <div class="bar mb_10">
-                                                        <div class="bar-inner count-bar" data-percent="80%"></div>
-                                                    </div>
-                                                    <p>Available: <span>80%</span></p>
-                                                </div>
-                                            </div>
-                                            <div class="cart-content">
-                                                <div class="cart-inner">
-                                                    <h3><i class="fa-solid fa-indian-rupee-sign"></i>08.99</h3>
-                                                    <div class="item-quantity-selector">
-                                                        <input class="quantity-spinner" type="text" value="1" name="quantity">
-                                                    </div>
-                                                    <div class="cart-btn"><button type="button" class="theme-btn btn-one">Add to Cart</button></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="shop-block-three">
-                                        <div class="inner-box">
-                                            <div class="image-box">
-                                                <span class="discount-product p_absolute l_0 t_30">6% Off</span>
-                                                <figure class="image"><a href="ShopDetails.php"><img src="public/assets/images/shop/shop-142.png" alt=""></a></figure>
-                                            </div>
-                                            <div class="content-box">
-                                                <h4><a href="ShopDetails.php">Garden Fresh Corn the yellow sunshine.</a></h4>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit facilisi diam, primis dapibus sapien conubia augue enim feugiat.</p>
-                                                <span class="product-stock mb_20"><img src="public/assets/images/icons/icon-11.png" alt=""> In Stock</span>
-                                                <ul class="rating"> 
-                                                    <li><i class="icon-11"></i></li>
-                                                    <li><i class="icon-11"></i></li>
-                                                    <li><i class="icon-11"></i></li>
-                                                    <li><i class="icon-11"></i></li>
-                                                    <li><i class="icon-11"></i></li>
-                                                    <li><span>(4.2)</span></li>
-                                                </ul>
-                                                <div class="progress-box low-stock">
-                                                    <div class="bar mb_10">
-                                                        <div class="bar-inner count-bar" data-percent="20%"></div>
-                                                    </div>
-                                                    <p>Available: <span>20%</span></p>
-                                                </div>
-                                            </div>
-                                            <div class="cart-content">
-                                                <div class="cart-inner">
-                                                    <h3><del class="mr_12"><i class="fa-solid fa-indian-rupee-sign"></i>01.99</del><i class="fa-solid fa-indian-rupee-sign"></i>00.99</h3>
-                                                    <div class="item-quantity-selector">
-                                                        <input class="quantity-spinner" type="text" value="1" name="quantity">
-                                                    </div>
-                                                    <div class="cart-btn"><button type="button" class="theme-btn btn-one">Add to Cart</button></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="shop-block-three">
-                                        <div class="inner-box">
-                                            <div class="image-box">
-                                                <figure class="image"><a href="ShopDetails.php"><img src="public/assets/images/shop/shop-143.png" alt=""></a></figure>
-                                            </div>
-                                            <div class="content-box">
-                                                <h4><a href="ShopDetails.php">Sheep meat Ram Lamb with 13 ribs TRIMMINGS Mutton</a></h4>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit facilisi diam, primis dapibus sapien conubia augue enim feugiat.</p>
-                                                <span class="product-stock mb_20"><img src="public/assets/images/icons/icon-11.png" alt=""> In Stock</span>
-                                                <ul class="rating"> 
-                                                    <li><i class="icon-11"></i></li>
-                                                    <li><i class="icon-11"></i></li>
-                                                    <li><i class="icon-11"></i></li>
-                                                    <li><i class="icon-11"></i></li>
-                                                    <li><i class="icon-11"></i></li>
-                                                    <li><span>(5.0)</span></li>
-                                                </ul>
-                                                <div class="progress-box">
-                                                    <div class="bar mb_10">
-                                                        <div class="bar-inner count-bar" data-percent="80%"></div>
-                                                    </div>
-                                                    <p>Available: <span>40%</span></p>
-                                                </div>
-                                            </div>
-                                            <div class="cart-content">
-                                                <div class="cart-inner">
-                                                    <h3><i class="fa-solid fa-indian-rupee-sign"></i>12.99</h3>
-                                                    <div class="item-quantity-selector">
-                                                        <input class="quantity-spinner" type="text" value="1" name="quantity">
-                                                    </div>
-                                                    <div class="cart-btn"><button type="button" class="theme-btn btn-one">Add to Cart</button></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="cta-section centred">
-                                        <div class="inner-container">
-                                            <div class="shape">
-                                                <div class="shape-1 p_absolute l_0 b_0" style="background-image: url(assets/images/shape/shape-25.html);"></div>
-                                                <div class="shape-2 p_absolute t_0 r_0" style="background-image: url(assets/images/shape/shape-26.html);"></div>
-                                            </div>
-                                            <span class="big-text">up to 30%</span>
-                                            <div class="image-layer">
-                                                <figure class="image p_absolute b_0 l_0" data-parallax='{"x": -100}'><img src="public/assets/images/resource/cta-9.png" alt=""></figure>
-                                                <figure class="image p_absolute b_0 r_0" data-parallax='{"x": 100}'><img src="public/assets/images/resource/cta-10.png" alt=""></figure>
-                                            </div>
-                                            <div class="content-box p_relative z_1">
-                                                <h2>Super Discount on First <br />Purchase</h2>
-                                                <a href="shop.php" class="theme-btn btn-one">Shop Now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="shop-block-three">
-                                        <div class="inner-box">
-                                            <div class="image-box">
-                                                <span class="discount-product p_absolute l_0 t_30">6% Off</span>
-                                                <figure class="image"><a href="ShopDetails.php"><img src="public/assets/images/shop/shop-144.png" alt=""></a></figure>
-                                            </div>
-                                            <div class="content-box">
-                                                <h4><a href="ShopDetails.php">Tide Scent Liquid Laundry Detergent</a></h4>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit facilisi diam, primis dapibus sapien conubia augue enim feugiat.</p>
-                                                <span class="product-stock mb_20"><img src="public/assets/images/icons/icon-11.png" alt=""> In Stock</span>
-                                                <ul class="rating"> 
-                                                    <li><i class="icon-11"></i></li>
-                                                    <li><i class="icon-11"></i></li>
-                                                    <li><i class="icon-11"></i></li>
-                                                    <li><i class="icon-11"></i></li>
-                                                    <li><i class="icon-11"></i></li>
-                                                    <li><span>(4.9)</span></li>
-                                                </ul>
-                                                <div class="progress-box low-stock">
-                                                    <div class="bar mb_10">
-                                                        <div class="bar-inner count-bar" data-percent="60%"></div>
-                                                    </div>
-                                                    <p>Available: <span>60%</span></p>
-                                                </div>
-                                            </div>
-                                            <div class="cart-content">
-                                                <div class="cart-inner">
-                                                    <h3><del class="mr_12"><i class="fa-solid fa-indian-rupee-sign"></i>10.99</del><i class="fa-solid fa-indian-rupee-sign"></i>08.99</h3>
-                                                    <div class="item-quantity-selector">
-                                                        <input class="quantity-spinner" type="text" value="1" name="quantity">
-                                                    </div>
-                                                    <div class="cart-btn"><button type="button" class="theme-btn btn-one">Add to Cart</button></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="shop-block-three">
-                                        <div class="inner-box">
-                                            <div class="image-box">
-                                                <figure class="image"><a href="ShopDetails.php"><img src="public/assets/images/shop/shop-145.png" alt=""></a></figure>
-                                            </div>
-                                            <div class="content-box">
-                                                <h4><a href="ShopDetails.php">Doritos Sweet Chili Heaat 50Gm Pack</a></h4>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit facilisi diam, primis dapibus sapien conubia augue enim feugiat.</p>
-                                                <span class="product-stock mb_20"><img src="public/assets/images/icons/icon-11.png" alt=""> In Stock</span>
-                                                <ul class="rating"> 
-                                                    <li><i class="icon-11"></i></li>
-                                                    <li><i class="icon-11"></i></li>
-                                                    <li><i class="icon-11"></i></li>
-                                                    <li><i class="icon-11"></i></li>
-                                                    <li><i class="icon-11"></i></li>
-                                                    <li><span>(5)</span></li>
-                                                </ul>
-                                                <div class="progress-box low-stock">
-                                                    <div class="bar mb_10">
-                                                        <div class="bar-inner count-bar" data-percent="70%"></div>
-                                                    </div>
-                                                    <p>Available: <span>70%</span></p>
-                                                </div>
-                                            </div>
-                                            <div class="cart-content">
-                                                <div class="cart-inner">
-                                                    <h3><i class="fa-solid fa-indian-rupee-sign"></i>03.99</h3>
-                                                    <div class="item-quantity-selector">
-                                                        <input class="quantity-spinner" type="text" value="1" name="quantity">
-                                                    </div>
-                                                    <div class="cart-btn"><button type="button" class="theme-btn btn-one">Add to Cart</button></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                               
                             </div>
-                            <div class="pagination-wrapper centred pt_40">
-                                <ul class="pagination clearfix">
-                                    <li><a href="shop.php"><i class="icon-21"></i></a></li>
-                                    <li><a href="shop.php" class="dot-link"></a></li>
-                                    <li><a href="shop.php" class="dot-link current"></a></li>
-                                    <li><a href="shop.php" class="dot-link"></a></li>
-                                    <li><a href="shop.php" class="dot-link"></a></li>
-                                    <li><a href="shop.php" class="dot-link"></a></li>
-                                    <li><a href="shop.php" class="dot-link"></a></li>
-                                    <li><a href="shop.php"><i class="icon-22"></i></a></li>
-                                </ul>
-                            </div>
+                           
                         </div>
                     </div>
                     
@@ -480,7 +237,8 @@ $cat_id_= $_GET['i'];
         <!-- shop-page-section end -->
 
 
-      
+        <input type="hidden" name="guesst_login_KEY" id="guesst_login_KEY"
+        value="<?= $_SESSION['tokenID'] ?>">
 
 
         

@@ -130,7 +130,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                                                 <div class="product">
                                                     <ul class="cart-list">
                                                         <?php
-
+$subtotal=0;
                                                         // Fetch cart items for the logged-in user
                                                         
                                                         $query = "SELECT * FROM cart_master WHERE login_key='$login_key'";
@@ -140,14 +140,14 @@ while ($row = mysqli_fetch_assoc($result)) {
                                                         $total_cart_items = mysqli_num_rows($result); // Count of items
                                                         while ($row = mysqli_fetch_assoc($result)) {
                                                             $productkey = $row['product_key'];
-
+                                                            $subtotal=$subtotal+$row['total'];
 
                                                             ?>
                                                             <li class="product-box-contain">
                                                                 <div class="drop-cart">
-                                                                    <a href="product-details.php?product_key=<?= $row['product_key']; ?>"
+                                                                    <a href="itemDetails.php?i=<?= $row['product_key']; ?>"
                                                                         class="drop-image">
-                                                                        <img src="ADMIN//../uploads/category/706594.png"
+                                                                        <img style="height:100px" src="ADMIN//<?=givedata($conn, "products", "p_key", $productkey, "filepath")?>"
                                                                             class="blur-up lazyload" alt="">
                                                                     </a>
 
@@ -167,7 +167,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                                                 <div class="cart-total">
                                                     <span>Subtotal</span>
                                                     <span class="cart-total-price"><i
-                                                            class="fa-solid fa-indian-rupee-sign"></i>0</span>
+                                                            class="fa-solid fa-indian-rupee-sign"></i><?=$subtotal?></span>
                                                 </div>
                                                 <div class="cart-action">
                                                     <a href="cart.php"

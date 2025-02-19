@@ -138,28 +138,23 @@
                                         <div class="form-inner">
                                             <form method="post" action="checkout.php">
                                                 <div class="row clearfix">
-                                                    <div class="col-lg-6 col-md-6 col-sm-12 field-column">
+                                                    <div class="col-lg-12 col-md-12 col-sm-12 field-column">
                                                         <div class="form-group">
-                                                            <label>First Name<span>*</span></label>
-                                                            <input type="text"  name="fname">
+                                                            <label>Full Name<span>*</span></label>
+                                                            <input type="text" value="<?=givedata($conn,"user_master","reg_no",$_SESSION['tokenID'],"name")?>"  name="fname">
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-6 col-md-6 col-sm-12 field-column">
-                                                        <div class="form-group">
-                                                            <label>Last Name<span>*</span></label>
-                                                            <input type="text" name="lname">
-                                                        </div>
-                                                    </div>
+                                                   
                                                     <div class="col-lg-6 col-md-6 col-sm-12 field-column">
                                                         <div class="form-group">
                                                             <label>Email Address<span>*</span></label>
-                                                            <input type="email" name="email">
+                                                            <input type="email" value="<?=givedata($conn,"user_master","reg_no",$_SESSION['tokenID'],"email")?>" name="email">
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6 col-md-6 col-sm-12 field-column">
                                                         <div class="form-group">
                                                             <label>Phone Number<span>*</span></label>
-                                                            <input type="text" name="phone">
+                                                            <input type="text" value="<?=givedata($conn,"user_master","reg_no",$_SESSION['tokenID'],"mobile_no")?>" name="phone">
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-12 col-md-12 col-sm-12 field-column">
@@ -169,18 +164,7 @@
                                                                 <select class="wide">
                                                                     <option data-display="Select Country">Select Country
                                                                     </option>
-                                                                    <option value="1">Australia</option>
-                                                                    <option value="2">Belgium</option>
-                                                                    <option value="3">Canada</option>
-                                                                    <option value="4">China</option>
-                                                                    <option value="5">France</option>
-                                                                    <option value="6">Germany</option>
-                                                                    <option value="7">Malaysia</option>
-                                                                    <option value="8">Mexico</option>
-                                                                    <option value="9">Russia</option>
-                                                                    <option value="10">Switzerland</option>
-                                                                    <option value="11">Turkey</option>
-                                                                    <option value="12">United Kingdom</option>
+                                                                    <option value="1">India</option>
                                                                 </select>
                                                             </div>
                                                         </div>

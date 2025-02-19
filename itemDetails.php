@@ -119,7 +119,7 @@ $pid=$_GET['i'];
                                                 <div class="image-box">
                                                     <figure class="image">
                                                         <img id="mainImage"
-                                                            src="public/assets/images/shop/shop-details-1.png"
+                                                            src="ADMIN//<?=givedata($conn,"products","p_key",$pid,"filepath")?>"
                                                             alt="Main Image">
                                                     </figure>
                                                 </div>
@@ -129,37 +129,38 @@ $pid=$_GET['i'];
                                                     <ul class="thumb-box clearfix">
                                                         <li>
                                                             <!-- Link to change the big image -->
-                                                            <a href="public/assets/images/shop/shop-details-1.png"
+                                                            <a href="ADMIN//<?=givedata($conn,"products","p_key",$pid,"filepath")?>"
                                                                 onclick="document.getElementById('mainImage').src=this.href; return false;">
                                                                 <figure>
-                                                                    <img src="public/assets/images/shop/thumb-1.png"
+                                                                    <img src="ADMIN//<?=givedata($conn,"products","p_key",$pid,"filepath")?>"
+                                                            
                                                                         alt="Thumbnail 1">
                                                                 </figure>
                                                             </a>
                                                         </li>
                                                         <li>
-                                                            <a href="public/assets/images/shop/shop-details-2.png"
+                                                            <a href="ADMIN//<?=givedata($conn,"products","p_key",$pid,"filepath_1")?>"
                                                                 onclick="document.getElementById('mainImage').src=this.href; return false;">
                                                                 <figure>
-                                                                    <img src="public/assets/images/shop/thumb-2.png"
+                                                                    <img src="ADMIN//<?=givedata($conn,"products","p_key",$pid,"filepath_1")?>"
                                                                         alt="Thumbnail 2">
                                                                 </figure>
                                                             </a>
                                                         </li>
                                                         <li>
-                                                            <a href="public/assets/images/shop/shop-details-3.png"
+                                                            <a href="ADMIN//<?=givedata($conn,"products","p_key",$pid,"filepath_2")?>"
                                                                 onclick="document.getElementById('mainImage').src=this.href; return false;">
                                                                 <figure>
-                                                                    <img src="public/assets/images/shop/thumb-3.png"
+                                                                    <img src="ADMIN//<?=givedata($conn,"products","p_key",$pid,"filepath_2")?>"
                                                                         alt="Thumbnail 3">
                                                                 </figure>
                                                             </a>
                                                         </li>
                                                         <li>
-                                                            <a href="public/assets/images/shop/shop-details-4.png"
+                                                            <a href="ADMIN//<?=givedata($conn,"products","p_key",$pid,"filepath_3")?>"
                                                                 onclick="document.getElementById('mainImage').src=this.href; return false;">
                                                                 <figure>
-                                                                    <img src="public/assets/images/shop/thumb-4.png"
+                                                                    <img src="ADMIN//<?=givedata($conn,"products","p_key",$pid,"filepath_3")?>"
                                                                         alt="Thumbnail 4">
                                                                 </figure>
                                                             </a>
@@ -248,14 +249,7 @@ $pid=$_GET['i'];
                                         <div class="rating-box">
                                             <span class="product-stock mr_30"><img
                                                     src="public/assets/images/icons/icon-11.png" alt=""> In Stock</span>
-                                            <ul class="rating">
-                                                <li><i class="icon-11"></i></li>
-                                                <li><i class="icon-11"></i></li>
-                                                <li><i class="icon-11"></i></li>
-                                                <li><i class="icon-11"></i></li>
-                                                <li><i class="icon-11"></i></li>
-                                                <li><span>(4.8)</span></li>
-                                            </ul>
+                                          
                                         </div>
                                         <ul class="discription-box mb_25 clearfix">
                                             <li><img src="public/assets/images/icons/icon-28.png" alt=""><span>Shipping
@@ -266,82 +260,62 @@ $pid=$_GET['i'];
                                                     :</span>ready for pickup when you order</li>
                                         </ul>
                                         <div class="addto-cart-box mb_45">
-                                            <ul class="clearfix">
-                                                <li class="item-quantity"><input class="quantity-spinner" type="text"
-                                                        value="1" name="quantity"></li>
-                                                <li><a href="ShopDetails.php"><i class="icon-5"></i></a></li>
-                                                <li class="like-btn"><button><i class="icon-6"></i></button></li>
-                                            </ul>
-                                            <div class="cart-btn mt_30"><button type="button"
-                                                    class="theme-btn btn-one">Add To Cart</button></div>
+                                            
+                                            <div class="cart-btn mt_30">
+                                            <?php
+                                                                            $avlKey = givedataMulti($conn, "cart_master", " product_key='$pid' AND login_key='$_SESSION[tokenID]'", "id");
+                                                                            if ($avlKey != "") {
+                                                                                ?>
+                                                                            <button onclick="add_to_cart(`<?= $pid ?>`)" id="<?= $pid ?>"
+                                                                                style="background-color: #212529 !important;" class="btn btn-md bg-dark cart-button text-white w-100">Go To Cart</button>
+                                                                            <?php
+                                                                            } else {
+                                                                                ?>
+                                                                            <button onclick="add_to_cart(`<?= $pid ?>`)" id="<?= $pid ?>" type="button"
+                                                                                class="theme-btn btn-one">Add To Cart</button>
+                                                                        
+                                                                            <?php
+                                                                            } ?>
+                                            
+                                          </div>
                                         </div>
-                                        <div class="size-box mb_30">
-                                            <h6>Size<span>*</span></h6>
-                                            <ul class="size-list">
-                                                <li>
-                                                    <div class="check-box">
-                                                        <input class="check" type="radio" id="size1" name="same2"
-                                                            checked>
-                                                        <label for="size1">1Kg</label>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="check-box">
-                                                        <input class="check" type="radio" id="size2" name="same2">
-                                                        <label for="size2">2Kg</label>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="check-box">
-                                                        <input class="check" type="radio" id="size3" name="same2">
-                                                        <label for="size3">500Gm</label>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="check-box">
-                                                        <input class="check" type="radio" id="size4" name="same2">
-                                                        <label for="size4">250Gm</label>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
+                                       
                                         <ul class="product-info clearfix mb_30">
-                                            <li><strong>Brand :</strong>Lorem ipsum</li>
-                                            <li><strong>Product SKU :</strong>#KKLW30</li>
-                                            <li><strong>Category :</strong>Vegetable</li>
+                                            <?php
+                                            $cat_id=givedata($conn,"products","p_key",$pid,"category_id");
+                                            ?>
+                                            <li><strong>Product SKU :</strong>#RABR<?=givedata($conn,"products","p_key",$pid,"id")?></li>
+                                            <li><strong>Category :</strong><?=givedata($conn,"category","id",$cat_id,"category_title")?></li>
                                         </ul>
                                         <div class="payment-option mb_30">
                                             <span>Guarantee Safe & Secure Checkout</span>
                                             <ul class="card-list">
-                                                <li><a href="ShopDetails.php"><img
+                                                <li><a href="#"><img
                                                             src="public/assets/images/icons/card-13.png" alt=""></a>
                                                 </li>
-                                                <li><a href="ShopDetails.php"><img
+                                                <li><a href="#"><img
                                                             src="public/assets/images/icons/card-14.png" alt=""></a>
                                                 </li>
-                                                <li><a href="ShopDetails.php"><img
+                                                <li><a href="#"><img
                                                             src="public/assets/images/icons/card-15.png" alt=""></a>
                                                 </li>
-                                                <li><a href="ShopDetails.php"><img
+                                                <li><a href="#"><img
                                                             src="public/assets/images/icons/card-16.png" alt=""></a>
                                                 </li>
-                                                <li><a href="ShopDetails.php"><img
+                                                <li><a href="#"><img
                                                             src="public/assets/images/icons/card-17.png" alt=""></a>
                                                 </li>
-                                                <li><a href="ShopDetails.php"><img
+                                                <li><a href="#"><img
                                                             src="public/assets/images/icons/card-18.png" alt=""></a>
                                                 </li>
                                             </ul>
                                         </div>
                                         <ul class="other-option clearfix">
-                                            <li><strong>Seller :</strong>Daniel Macron</li>
-                                            <li><strong>Tag :</strong><a href="ShopDetails.php">Best sellers</a>, <a
-                                                    href="ShopDetails.php">New Arrivals</a>, <a
-                                                    href="ShopDetails.php">On Sale</a></li>
+                                           
                                             <li class="social-links"><strong>Share :</strong><a
-                                                    href="ShopDetails.php"><i class="icon-13"></i></a><a
-                                                    href="ShopDetails.php"><i class="icon-14"></i></a><a
-                                                    href="ShopDetails.php"><i class="icon-15"></i></a></li>
+                                                    href="#"><i class="icon-13"></i></a><a
+                                                    href="#"><i class="icon-14"></i></a><a
+                                                    href="#"><i class="icon-15"></i></a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -352,273 +326,15 @@ $pid=$_GET['i'];
                                 <div class="tab-btn-box">
                                     <ul class="tab-btns tab-buttons clearfix">
                                         <li class="tab-btn active-btn" data-tab="#tab-1">Description</li>
-                                        <li class="tab-btn" data-tab="#tab-2">Specification</li>
-                                        <li class="tab-btn" data-tab="#tab-3">Reviews (08)</li>
+                                     
                                     </ul>
                                 </div>
                                 <div class="tabs-content">
                                     <div class="tab active-tab" id="tab-1">
                                         <div class="discription-content pt_45">
-                                            <p>Corn is a good source of carbohydrates, providing energy in the form of
-                                                starch. It also contains dietary fiber, which supports digestive health,
-                                                and various vitamins and minerals, including vitamin C, vitamin B6,
-                                                folate, magnesium, and potassium. However, it is essential to note that
-                                                some processed corn products, such as corn syrup and corn chips, may
-                                                contain added sugars, salt, or fats, which can affect their nutritional
-                                                profile.</p>
-                                            <p>Corn holds significant cultural and economic importance in many societies
-                                                around the world. It has been a staple food crop in the Americas for
-                                                thousands of years and plays a crucial role in the diets of many
-                                                indigenous peoples. Additionally, corn is a major commodity crop
-                                                globally, with vast quantities grown for both human consumption and
-                                                animal feed. It is also used in various non-food products, such as
-                                                biofuels, industrial starches, and bioplastics.</p>
-                                            <h4>Features :</h4>
-                                            <ul class="list-style-one clearfix">
-                                                <li><span>Cob Structure:</span> Corn is characterized by its distinctive
-                                                    cob structure.</li>
-                                                <li><span>Variety of Colors:</span> While yellow is the most common
-                                                    color of corn kernels, they can also be found in a range of colors.
-                                                </li>
-                                                <li><span>Tall Stalks:</span> Corn plants typically grow tall, with
-                                                    sturdy stalks reaching heights of 2 to 3 meters (6 to 10 feet)</li>
-                                                <li><span>Reproductive System:</span> Corn is primarily wind-pollinated,
-                                                    with pollen being released from the tassels</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="tab" id="tab-2">
-                                        <div class="specification-content pt_50">
-                                            <ul class="specification-list clean">
-                                                <li><strong>Moisture</strong>13.5% max.</li>
-                                                <li><strong>Broken grains</strong>5.5% max.</li>
-                                                <li><strong>Diseased grain</strong>0.5% max.</li>
-                                                <li><strong>Other grains</strong>2% max.</li>
-                                                <li><strong>Foreign matter</strong>0.5% max.</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="tab" id="tab-3">
-                                        <div class="review-content pt_50">
-                                            <div class="avg-rating mb_55">
-                                                <ul class="rating-list">
-                                                    <li><i class="icon-11"></i><i class="icon-11"></i><i
-                                                            class="icon-11"></i><i class="icon-11"></i><i
-                                                            class="icon-11"></i><span>100%</span></li>
-                                                    <li><i class="icon-11"></i><i class="icon-11"></i><i
-                                                            class="icon-11"></i><i class="icon-11"></i><i
-                                                            class="icon-11 light"></i><span>60%</span></li>
-                                                    <li><i class="icon-11"></i><i class="icon-11"></i><i
-                                                            class="icon-11"></i><i class="icon-11 light"></i><i
-                                                            class="icon-11 light"></i><span>40%</span></li>
-                                                    <li><i class="icon-11"></i><i class="icon-11"></i><i
-                                                            class="icon-11 light"></i><i class="icon-11 light"></i><i
-                                                            class="icon-11 light"></i><span>20%</span></li>
-                                                    <li><i class="icon-11"></i><i class="icon-11 light"></i><i
-                                                            class="icon-11 light"></i><i class="icon-11 light"></i><i
-                                                            class="icon-11 light"></i><span>10%</span></li>
-                                                </ul>
-                                                <div class="avg-rating-text">
-                                                    <div class="inner">
-                                                        <h2>4.50</h2>
-                                                        <ul class="rating">
-                                                            <li><i class="icon-11"></i></li>
-                                                            <li><i class="icon-11"></i></li>
-                                                            <li><i class="icon-11"></i></li>
-                                                            <li><i class="icon-11"></i></li>
-                                                            <li><i class="icon-11"></i></li>
-                                                        </ul>
-                                                        <p>Avg. Star Rating</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="single-review">
-                                                <h4 class="mb_25">21 Reviews</h4>
-                                                <div class="upper-box">
-                                                    <div class="info-box">
-                                                        <figure class="image"><img
-                                                                src="public/assets/images/resource/review-1.png" alt="">
-                                                        </figure>
-                                                        <div class="inner">
-                                                            <h4 class="fw_sbold">Georgina <span class="date">March 20,
-                                                                    2024</span></h4>
-                                                        </div>
-                                                    </div>
-                                                    <ul class="option-btn">
-                                                        <li><button><i class="icon-46"></i></button>12</li>
-                                                        <li><button><i class="icon-47"></i></button>0</li>
-                                                    </ul>
-                                                </div>
-                                                <ul class="rating">
-                                                    <li><i class="icon-11"></i></li>
-                                                    <li><i class="icon-11"></i></li>
-                                                    <li><i class="icon-11"></i></li>
-                                                    <li><i class="icon-11"></i></li>
-                                                    <li><i class="icon-11"></i></li>
-                                                </ul>
-                                                <p>To provide a review of a specific washing machine, I would need to
-                                                    know the brand and model of the washing machine you're interested in
-                                                    reviewing. If you have a particular washing machine in mind, please
-                                                    provide its details, and I can help you create a comprehensive
-                                                    review. Alternatively, if you're looking for a general review of
-                                                    washing machines.</p>
-                                                <ul class="image-list">
-                                                    <li><img src="public/assets/images/resource/review-img-1.jpg"
-                                                            alt=""></li>
-                                                    <li><img src="public/assets/images/resource/review-img-2.jpg"
-                                                            alt=""></li>
-                                                    <li><img src="public/assets/images/resource/review-img-3.jpg"
-                                                            alt=""></li>
-                                                </ul>
-                                                <div class="reply-review mt_40">
-                                                    <div class="upper-box">
-                                                        <div class="info-box">
-                                                            <figure class="image"><img
-                                                                    src="public/assets/images/resource/review-2.png"
-                                                                    alt=""></figure>
-                                                            <div class="inner">
-                                                                <h4 class="fw_sbold">Seller</h4>
-                                                            </div>
-                                                        </div>
-                                                        <ul class="option-btn">
-                                                            <li><button><i class="icon-46"></i></button>12</li>
-                                                            <li><button><i class="icon-47"></i></button>0</li>
-                                                        </ul>
-                                                    </div>
-                                                    <p>Lorem Ipsum available, but the majority have suffered alteration
-                                                        in some form, by injected humour, or randomised words which
-                                                        don't look even slightly believable. If you are going to use a
-                                                        passage of Lorem Ipsum, you need to be sure there isn't anything
-                                                        embarrassing hidden in the middle of text.</p>
-                                                </div>
-                                            </div>
-                                            <div class="single-review">
-                                                <div class="upper-box">
-                                                    <div class="info-box">
-                                                        <figure class="image"><img
-                                                                src="public/assets/images/resource/review-3.png" alt="">
-                                                        </figure>
-                                                        <div class="inner">
-                                                            <h4 class="fw_sbold">Dania Monjur<span class="date">June 12,
-                                                                    2023</span></h4>
-                                                        </div>
-                                                    </div>
-                                                    <ul class="option-btn">
-                                                        <li><button><i class="icon-46"></i></button>12</li>
-                                                        <li><button><i class="icon-47"></i></button>0</li>
-                                                    </ul>
-                                                </div>
-                                                <ul class="rating">
-                                                    <li><i class="icon-11"></i></li>
-                                                    <li><i class="icon-11"></i></li>
-                                                    <li><i class="icon-11"></i></li>
-                                                    <li><i class="icon-11"></i></li>
-                                                    <li><i class="icon-11"></i></li>
-                                                </ul>
-                                                <p>To provide a review of a specific washing machine, I would need to
-                                                    know the brand and model of the washing machine you're interested in
-                                                    reviewing. If you have a particular washing machine in mind, please
-                                                    provide its details, and I can help you create a comprehensive
-                                                    review. Alternatively, if you're looking for a general review of
-                                                    washing machines.</p>
-                                                <ul class="image-list">
-                                                    <li><img src="public/assets/images/resource/review-img-4.jpg"
-                                                            alt=""></li>
-                                                    <li><img src="public/assets/images/resource/review-img-5.jpg"
-                                                            alt=""></li>
-                                                </ul>
-                                            </div>
-                                            <div class="customer-review">
-                                                <h3>Write Your Rating</h3>
-                                                <div class="rating-box mb_25">
-                                                    <p>Your Rating <span>*</span></p>
-                                                    <ul class="review-list clearfix">
-                                                        <li>
-                                                            <div class="check-box">
-                                                                <input class="check" type="checkbox" id="checkbox101">
-                                                                <label for="checkbox101"><i class="icon-11"></i></label>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="check-box">
-                                                                <input class="check" type="checkbox" id="checkbox102">
-                                                                <label for="checkbox102"><i class="icon-11"></i><i
-                                                                        class="icon-11"></i></label>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="check-box">
-                                                                <input class="check" type="checkbox" id="checkbox103">
-                                                                <label for="checkbox103"><i class="icon-11"></i><i
-                                                                        class="icon-11"></i><i
-                                                                        class="icon-11"></i></label>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="check-box">
-                                                                <input class="check" type="checkbox" id="checkbox104">
-                                                                <label for="checkbox104"><i class="icon-11"></i><i
-                                                                        class="icon-11"></i><i class="icon-11"></i><i
-                                                                        class="icon-11"></i></label>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="check-box">
-                                                                <input class="check" type="checkbox" id="checkbox105">
-                                                                <label for="checkbox105"><i class="icon-11"></i><i
-                                                                        class="icon-11"></i><i class="icon-11"></i><i
-                                                                        class="icon-11"></i><i
-                                                                        class="icon-11"></i></label>
-                                                            </div>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="form-inner">
-                                                    <form method="post"
-                                                        action="https://azim.hostlin.com/Hatbazar/https://rabbiroots.com/ShopDetails">
-                                                        <div class="row clearfix">
-                                                            <div class="col-lg-6 col-md-6 col-sm-12 single-column">
-                                                                <div class="form-group">
-                                                                    <label>Your Name <span>*</span></label>
-                                                                    <input type="text" name="name">
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <label>Email Address <span>*</span></label>
-                                                                    <input type="email" name="email">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-lg-6 col-md-6 col-sm-12 single-column">
-                                                                <div class="form-group">
-                                                                    <label>Write Your Review <span>*</span></label>
-                                                                    <textarea name="message"></textarea>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group upload-field">
-                                                            <label>Add Photos and Video</label>
-                                                            <div class="upload-box">
-                                                                <input name="files[]" id="filer_input2"
-                                                                    multiple="multiple" type="file">
-                                                                <div class="upload-content">
-                                                                    <i class="icon-48"></i>
-                                                                    <span>Upload Image</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <div class="check-box-two">
-                                                                <input class="check" type="checkbox" id="checkbox1">
-                                                                <label for="checkbox1">Save my name, email, and website
-                                                                    in this browser for the next time I comment.</label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="message-btn">
-                                                            <button type="submit" class="theme-btn btn-one">Submit
-                                                                Review<span></span><span></span><span></span><span></span></button>
-                                                        </div>
-                                                    </form>
-                                                </div>
-                                            </div>
+                                            <?=givedata($conn,"products","p_key",$pid,"description_details")?>
+                                          
+                                           
                                         </div>
                                     </div>
                                 </div>
@@ -627,7 +343,8 @@ $pid=$_GET['i'];
                     </div>
                 </section>
                 <!-- shop-details end -->
-
+                <input type="hidden" name="guesst_login_KEY" id="guesst_login_KEY"
+                value="<?= $_SESSION['tokenID'] ?>">
 
 
 
@@ -706,6 +423,82 @@ $pid=$_GET['i'];
 
             <!-- main-js -->
             <script src="public/assets/js/script.js"></script>
+            <script>
+    
+    function add_to_cart(id) {
+        var pID = id;
+        var guesst_login_KEY = document.getElementById("guesst_login_KEY").value;
+        var jj=document.getElementById(id).innerHTML;
+
+        if(guesst_login_KEY==""){
+            alert("Please Login First");
+            window.location.href = 'login.php';
+        }
+        
+        if(jj==="Go To Cart")
+        {
+            window.location.href = 'cart.php';
+
+        }else{
+                    $.ajax({
+            type: "POST",
+            url: "add_to_cart.php",
+            data: ({ product_key: pID, login_key: guesst_login_KEY }), // Serialize form data
+            success: function (data) {
+                console.log('my message' + data);
+                let mydata = data.split("__AJAX-");
+                var word = "" + mydata[1];
+                console.log('my message' + word);
+                let ans = "" + word.localeCompare("Done");
+                if (ans == 0) {
+                  
+                REFRESHCART();
+                document.getElementById(id).innerHTML ="Go To Cart" ;
+               
+                document.getElementById(id).style.backgroundColor  = "#212529";
+
+                   // getCartDeatils(guesst_login_KEY);
+                    //document.getElementById("reg_div").style.display = "none";
+                    // document.getElementById("otp_div").style.display = "block";
+
+
+                } else {
+                    alert("0")
+                }
+            },
+            error: function (data) {
+                alert("Error occurred while submitting the form");
+            }
+        });
+    }
+
+    }
+
+    function REFRESHCART(){
+
+        $.ajax({
+            type: "POST",
+            url: "getCartDetails.php",
+            data: ({  }), // Serialize form data
+            success: function (data) {
+                console.log('my message' + data);
+                let mydata = data.split("__AJAX-");
+              
+                document.getElementById("cartDetails_DIV").innerHTML =mydata[1] ;
+
+             
+            },
+            error: function (data) {
+                alert("Error occurred while submitting the form");
+            }
+        });
+
+    }
+
+
+
+</script>
+
     </body><!-- End of .page_wrapper -->
 
     <!-- Mirrored from azim.hostlin.com/Hatbazar/https://rabbiroots.com/ShopDetails by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 11:25:59 GMT -->
