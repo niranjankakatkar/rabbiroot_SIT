@@ -47,15 +47,7 @@ if($_SESSION['token']=="")
                                 <button type="submit"><i class="iconoir-search"></i></button>
                             </form>
                         </li>     
-                        <li class="dropdown">
-                            <a class="nav-link dropdown-toggle arrow-none nav-icon" data-bs-toggle="dropdown" href="#" role="button"
-                            aria-haspopup="false" aria-expanded="false">
-                            <img src="../assets/images/flags/us_flag.jpg" alt="" class="thumb-sm rounded-circle">
-                            </a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#"><img src="../assets/images/flags/us_flag.jpg" alt="" height="15" class="me-2">English</a>
-                                 </div>
-                        </li><!--end topbar-language-->
+                       <!--end topbar-language-->
         
                         <li class="topbar-item">
                             <a class="nav-link nav-icon" href="javascript:void(0);" id="light-dark-mode">
@@ -68,12 +60,12 @@ if($_SESSION['token']=="")
                         <li class="dropdown topbar-item">
                             <a class="nav-link dropdown-toggle arrow-none nav-icon" data-bs-toggle="dropdown" href="#" role="button"
                                 aria-haspopup="false" aria-expanded="false">
-                                <img src="../assets/images/users/avatar-1.jpg" alt="" class="thumb-lg rounded-circle">
+                                <img src="https://th.bing.com/th/id/OIP.tvaMwK3QuFxhTYg4PSNNVAHaHa?rs=1&pid=ImgDetMain" alt="" class="thumb-lg rounded-circle">
                             </a>
                             <div class="dropdown-menu dropdown-menu-end py-0">
                                 <div class="d-flex align-items-center dropdown-item py-2 bg-secondary-subtle">
                                     <div class="flex-shrink-0">
-                                        <img src="../assets/images/users/avatar-1.jpg" alt="" class="thumb-md rounded-circle">
+                                        <img src="https://th.bing.com/th/id/OIP.tvaMwK3QuFxhTYg4PSNNVAHaHa?rs=1&pid=ImgDetMain" alt="" class="thumb-md rounded-circle">
                                     </div>
                                     <div class="flex-grow-1 ms-2 text-truncate align-self-center">
                                         <h6 class="my-0 fw-medium text-dark fs-13"><?=givedata($conn,"admin_login","token",$_SESSION['token'],"name");?></h6>
@@ -195,15 +187,11 @@ if($_SESSION['token']=="")
                                         <li class="nav-item">
                                             <a class="nav-link" href="../AttributeT/">Attribute Type</a>
                                         </li><!--end nav-item--> 
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="../AttributeT/add.php">Add New Attribute Type</a>
-                                        </li><!--end nav-item-->
+                                       
 										<li class="nav-item">
                                             <a class="nav-link" href="../Attribute/">Attribute List</a>
                                         </li><!--end nav-item--> 
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="../Attribute/add.php">Add New Attribute</a>
-                                        </li><!--end nav-item-->
+                                       
                                     </ul><!--end nav-->
                                 </div><!--end startbarElements-->
                             </li>

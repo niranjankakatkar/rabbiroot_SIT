@@ -285,11 +285,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
                                             if($url_id=='')
                                             {
                                                 ?>
-											<input type="file" class="form-control" name="product_img" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload Image" accept="image/*" required>
+											<input type="file" class="form-control" name="product_img" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload Image" accept="image/png, image/gif, image/jpeg" required>
                                             <?php
                                             }else{
                                                 ?> 
-                                                <input type="file" class="form-control" name="product_img" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload Image" accept="image/*" >
+                                                <input type="file" class="form-control" name="product_img" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload Image" accept="image/png, image/gif, image/jpeg" >
                                                 <a href="<?=givedata($conn,"products","id",$url_id,"filepath")?>" class="lightbox"> <img src="<?=givedata($conn,"products","id",$url_id,"filepath")?>" alt="" height="100"></a>
                                               
                                                 <?php
@@ -307,11 +307,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
                                             if($url_id=='')
                                             {
                                                 ?>
-											<input type="file" class="form-control" name="product_img1" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload Image" accept="image/*" required>
+											<input type="file" class="form-control" name="product_img1" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload Image" accept="image/png, image/gif, image/jpeg" required>
                                             <?php
                                             }else{
                                                 ?> 
-                                                <input type="file" class="form-control" name="product_img1" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload Image" accept="image/*" >
+                                                <input type="file" class="form-control" name="product_img1" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload Image" accept="image/png, image/gif, image/jpeg" >
                                                 <a href="<?=givedata($conn,"products","id",$url_id,"filepath_1")?>" class="lightbox"> <img src="<?=givedata($conn,"products","id",$url_id,"filepath_1")?>" alt="" height="100"></a>
                                               
                                                 <?php
@@ -328,11 +328,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
                                             if($url_id=='')
                                             {
                                                 ?>
-											<input type="file" class="form-control" name="product_img2" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload Image" accept="image/*" required>
+											<input type="file" class="form-control" name="product_img2" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload Image" accept="image/png, image/gif, image/jpeg" required>
                                             <?php
                                             }else{
                                                 ?> 
-                                                <input type="file" class="form-control" name="product_img2" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload Image" accept="image/*" >
+                                                <input type="file" class="form-control" name="product_img2" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload Image" accept="image/png, image/gif, image/jpeg" >
                                                 <a href="<?=givedata($conn,"products","id",$url_id,"filepath_2")?>" class="lightbox"> <img src="<?=givedata($conn,"products","id",$url_id,"filepath_2")?>" alt="" height="100"></a>
                                               
                                                 <?php
@@ -349,11 +349,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
                                             if($url_id=='')
                                             {
                                                 ?>
-											<input type="file" class="form-control" name="product_img3" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload Image" accept="image/*" required>
+											<input type="file" class="form-control" name="product_img3" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload Image" accept="image/png, image/gif, image/jpeg" required>
                                             <?php
                                             }else{
                                                 ?> 
-                                                <input type="file" class="form-control" name="product_img3" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload Image" accept="image/*" >
+                                                <input type="file" class="form-control" name="product_img3" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload Image" accept="image/png, image/gif, image/jpeg" >
                                                 <a href="<?=givedata($conn,"products","id",$url_id,"filepath_3")?>" class="lightbox"> <img src="<?=givedata($conn,"products","id",$url_id,"filepath_3")?>" alt="" height="100"></a>
                                               
                                                 <?php

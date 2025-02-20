@@ -69,21 +69,7 @@ if($Dflag!=""){
                                         </div><!--end col-->
                                         <div class="col-auto"> 
                                             <form class="row g-2">
-                                                <div class="col-auto">
-                                                    <a class="btn bg-primary-subtle text-primary dropdown-toggle d-flex align-items-center arrow-none" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false" data-bs-auto-close="outside">
-                                                        <i class="iconoir-filter-alt me-1"></i> Filter
-                                                    </a>
-                                                    <div class="dropdown-menu dropdown-menu-start">
-                                                        <div class="p-2">
-                                                            <div class="form-check mb-2">
-                                                                <input type="checkbox" class="form-check-input" checked id="filter-all">
-                                                                <label class="form-check-label" for="filter-all">
-                                                                  All 
-                                                                </label>
-                                                            </div>
-                                                          </div>
-                                                    </div>
-                                                </div><!--end col-->
+                                               
                                                 
                                                 <div class="col-auto">
                                                   <a  class="btn btn-primary"  href="add.php"><i class="fa-solid fa-plus me-1"></i> Add New</a>
@@ -98,15 +84,17 @@ if($Dflag!=""){
                                         <table class="table mb-0 checkbox-all" id="datatable_1">
                                             <thead class="table-light">
                                               <tr>
-                                                <th style="width: 16px;">
-                                                    SR.No.
+                                              <th style="width: 5%;">
+                                                  SR.No.
                                                 </th>
-												<th>Sub Category</th>
-                                                <th>Description</th>
-                                                <th>Category</th>
-                                                 <th>Status</th>
-                                                <th>Created At</th>
-                                                <th class="text-end">Action</th>
+                                                <th style="width: 10%;">Image</th>
+                                                <th style="width: 25%;">Sub Category</th>
+                                                <th style="width: 20%;">Description</th>
+                                                <th style="width: 15%;">Category</th>
+                                                <th  style="width: 10%;">Status</th>
+                                                <th style="width: 20%;">Created At</th>
+                                                <th class="text-end" >Action</th>
+
                                               </tr>
                                             </thead>
                                             <tbody>
@@ -123,9 +111,12 @@ if($Dflag!=""){
                                                     <td style="width: 16px;">
                                                        <?=$i++?>
                                                     </td>
+                                                    <td>
+                                                    <a href="<?=$row['filepath']?>" class="lightbox"> <img src="<?=$row['filepath']?>" alt="" height="50"></a>
+                                                   
+                                                    </td>
                                                     <td class="ps-0">
-													<a href="<?=$row['filepath']?>" class="lightbox"> <img src="<?=$row['filepath']?>" alt="" height="50"></a>
-                                                        <p class="d-inline-block align-middle mb-0">
+												     <p class="d-inline-block align-middle mb-0">
                                                             <a  class="d-inline-block align-middle mb-0 product-name"><?=$row['sub_category_title']?></a> 
                                                             <br>
                                                           

@@ -139,12 +139,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
                                             if($url_id=='')
                                             {
                                                 ?>
-                                                <input type="file" class="form-control"  name="category_img" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" accept="image/*" required>
+                                                <input type="file" class="form-control"  name="category_img" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" accept="image/png, image/gif, image/jpeg" required>
 											
                                                 <?php
                                             }else{
                                                 ?>
-                                                <input type="file" class="form-control"  name="category_img" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" accept="image/*" ><br>
+                                                <input type="file" class="form-control"  name="category_img" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" accept="image/png, image/gif, image/jpeg" ><br>
                                                 <a href="<?=givedata($conn,"category","id",$url_id,"filepath")?>" class="lightbox"> <img src="<?=givedata($conn,"category","id",$url_id,"filepath")?>" alt="" height="100"></a>
                                                      
                                                 <?php
