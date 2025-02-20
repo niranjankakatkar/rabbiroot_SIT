@@ -837,8 +837,7 @@ include 'niru_collection.php';
             alert("Please Login First");
             window.location.href = 'login.php';
         }
-        
-        if(jj==="Go To Cart")
+        else if(jj==="Go To Cart")
         {
             window.location.href = 'cart.php';
 
