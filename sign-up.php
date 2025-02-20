@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $key_ = generateRandomCHAR_INT(10);
 
     // Check if the user already exists
-    $check_query = "SELECT * FROM user_master WHERE email='$email' OR mobile_no='$mobile_no'";
+    $check_query = "SELECT * FROM user_master WHERE email='$email' AND mobile_no='$mobile_no'";
     $result = $conn->query($check_query);
 
     if ($result->num_rows > 0) {
@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } else {
         // Insert new user
         $sql = "INSERT INTO user_master(name, email, mobile_no, password, reg_no,active_flag) VALUES('$full_name', '$email', '$mobile_no', '$password', '$key_','1')";
-        echo ''.$sql;
+       
         if ($conn->query($sql)) {
             echo "<script>alert('User Registered successfully.'); window.location.href='index.php';</script>";
         } else {
@@ -170,11 +170,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <h3>Sign Up</h3>
         </div>
         <div class="form-inner">
-        <form autocomplete="off" method="post" accept-charset="utf-8" id="registrationForm" onsubmit="return validation();">
+        <form autocomplete="off" method="post" accept-charset="utf-8" id="registrationForm" >
                 <!-- Full Name -->
                 <div class="form-group">
-                    <label for="full_name">Full Name <span>*</span></label>
-                    <input type="text" id="full_name" name="full_name" placeholder="Enter your Name" required>
+                    <label for="full_name">Full Name <span style="color: red;">*</span></label>
+                    <input type="text" id="full_name" onkeypress="return /[0-9a-zA-Z]/i.test(event.key)" name="full_name" placeholder="Enter your Name" required>
                 </div>
 
                 <!-- Email -->
@@ -185,14 +185,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 <!-- Mobile Number -->
                 <div class="form-group">
-                    <label for="mobile_no">Mobile Number <span>*</span></label>
+                    <label for="mobile_no">Mobile Number <span style="color: red;">*</span></label>
                     <input type="text"  id="mobile_no"  name="mobile_no" placeholder="Enter your Mobile Number"  required  pattern="[0-9]{10}"  title="Please enter a valid 10-digit mobile number ">
                 </div>
 
 
                 <!-- Password -->
                 <div class="form-group" style="position: relative;">
-                  <label for="password">Password <span>*</span></label>
+                  <label for="password">Password <span style="color: red;">*</span></label>
                    <input type="password" id="password" name="password" placeholder="Enter your Password"  required >
                    <!-- Eye Icon -->
                    <span 

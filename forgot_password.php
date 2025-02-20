@@ -253,7 +253,7 @@
                         document.getElementById("login_responce").innerHTML = "<span style='color:orange'>Account is not activated</span>";
 
                     } else {
-                        document.getElementById("login_responce").innerHTML = "<span style='color:red'>Entered credentials are invalid</span>";
+                        document.getElementById("login_responce").innerHTML = "<span style='color:red'>Please enter valid credential</span>";
 
                     }
                 },

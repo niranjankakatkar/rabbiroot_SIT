@@ -4,13 +4,13 @@ $Dflag=$_GET['Dflag'];
 $url_id=$_GET['id'];
 
 if($Dflag!=""){
-		$filepath=givedata($conn,"sub_category","id",$url_id,"filepath");
-	$sql = "DELETE FROM sub_category WHERE id='$url_id'";
-	if($conn->query($sql)){
-			  unlink($filepath);
+	$filepath=givedata($conn,"category","id",$url_id,"filepath");
 	
+	$sql = "DELETE FROM category WHERE id='$url_id'";
+	if($conn->query($sql)){
+		  unlink($filepath);
 		?>
-		<script>window.location.href="../Subcategory/"; </script>
+		<script>window.location.href="../Category/"; </script>
 		<?php
 	}
 }
@@ -44,6 +44,8 @@ if($Dflag!=""){
          <link href="../assets/css/icons.min.css" rel="stylesheet" type="text/css" />
          <link href="../assets/css/app.min.css" rel="stylesheet" type="text/css" />
 		 
+        <link href="../assets/libs/tobii/css/tobii.min.css" rel="stylesheet" type="text/css" />
+		
 
     </head>
 
@@ -65,7 +67,7 @@ if($Dflag!=""){
                                 <div class="card-header">
                                     <div class="row align-items-center">
                                         <div class="col">                      
-                                            <h4 class="card-title">Sub Category List</h4>                      
+                                            <h4 class="card-title">Conatct-Us List</h4>                      
                                         </div><!--end col-->
                                         <div class="col-auto"> 
                                             <form class="row g-2">
@@ -85,9 +87,7 @@ if($Dflag!=""){
                                                     </div>
                                                 </div><!--end col-->
                                                 
-                                                <div class="col-auto">
-                                                  <a  class="btn btn-primary"  href="add.php"><i class="fa-solid fa-plus me-1"></i> Add New</a>
-                                                </div><!--end col-->
+                                                <!--end col-->
                                             </form>    
                                         </div><!--end col-->
                                     </div><!--end row-->                                  
@@ -99,59 +99,54 @@ if($Dflag!=""){
                                             <thead class="table-light">
                                               <tr>
                                                 <th style="width: 16px;">
-                                                    SR.No.
+                                                   Sr.No.
                                                 </th>
-												<th>Sub Category</th>
-                                                <th>Description</th>
-                                                <th>Category</th>
-                                                 <th>Status</th>
+                                                <th>Namr</th>
+                                                <th>Email</th>
+                                                <th>Mobile No</th>
+                                                <th>Subject</th>
+                                                <th>Message</th>
                                                 <th>Created At</th>
-                                                <th class="text-end">Action</th>
+                                             
                                               </tr>
                                             </thead>
                                             <tbody>
 											     <?php
-										   $sql = "SELECT * FROM sub_category ORDER BY id DESC";
+										   $sql = "SELECT * FROM contact_us ORDER BY id DESC";
 										   $result = mysqli_query($conn, $sql);
 										   
 									   $i=1;
 											   while($row = mysqli_fetch_assoc($result)) {
 												   $timepstamp=$row['timestamp'];
 													$timepstamp=date_create("".$timepstamp);
+                                                    $userKey=$row['reg_no'];
 			   ?>
                                                 <tr>
                                                     <td style="width: 16px;">
                                                        <?=$i++?>
                                                     </td>
                                                     <td class="ps-0">
-													<a href="<?=$row['filepath']?>" class="lightbox"> <img src="<?=$row['filepath']?>" alt="" height="50"></a>
-                                                        <p class="d-inline-block align-middle mb-0">
-                                                            <a  class="d-inline-block align-middle mb-0 product-name"><?=$row['sub_category_title']?></a> 
-                                                            <br>
+													   
+                                                       <?=$row['name']?>
                                                           
-                                                        </p>
+                                                       
                                                     </td>
-                                                    <td>  <span class="text-muted font-13"><?=$row['description']?></span> </td>
-													<td><?=givedata($conn,"category","id",$row['category_id'],"category_title");?></td>
                                                     <td>
-													<?php
-														if($row['flag']==1){
-													?>
-													<span class="badge bg-success-subtle text-success"><i class="fas fa-check me-1"></i> Published</span></td>
-														<?php
-														}else{
-															?>
-													<span class="badge bg-danger-subtle text-danger"><i class="fas fa-xmark me-1"></i> Inactive</span></td>
-														<?php
-														}?>
+                                                        <span><?=$row['email']?></span>
+                                                    </td>
+                                                    <td>
+                                                        <span><?=$row['phone_no']?></span>
+                                                    </td>
+                                                    <td>
+                                                        <span><?=$row['subject']?></span>
+                                                    </td>
+                                                    <td>
+                                                        <span><?=$row['message']?></span>
+                                                    </td>
                                                     <td>
                                                         <span><?=date_format($timepstamp,"l, d F  H:i A");?></span>
                                                     </td>
-                                                    <td class="text-end">                                                       
-                                                        <a href="add.php?id=<?=$row['id']?>"><i class="las la-pen text-secondary fs-18"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                        <a onclick="return confirm('Are you sure?')" href="?id=<?=$row['id']?>&Dflag=1"><i class="las la-trash-alt text-secondary fs-18"></i></a>
-														
-                                                    </td>
+                                                    
                                                 </tr>
 												
 												<?php
@@ -246,6 +241,11 @@ if($Dflag!=""){
         <script src="../assets/libs/simple-datatables/umd/simple-datatables.js"></script>
         <script src="../assets/js/pages/datatable.init.js"></script>
         <script src="../assets/js/app.js"></script>
+		
+        <script src="../assets/libs/tobii/js/tobii.min.js"></script>
+		<script>
+            const tobii = new Tobii()
+        </script>
     </body>
     <!--end body-->
 

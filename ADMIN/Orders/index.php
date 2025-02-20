@@ -64,9 +64,7 @@ if($Dflag!=""){
                                         <div class="col">                      
                                             <h4 class="card-title">Orders</h4>                      
                                         </div><!--end col-->
-                                        <div class="col-auto">                      
-                                            <button class="btn btn-primary"><i class="fas fa-plus me-1"></i> Add Order</button>                   
-                                        </div><!--end col-->
+                                       <!--end col-->
                                     </div>  <!--end row-->                                  
                                 </div><!--end card-header-->
                                 <div class="card-body pt-0">

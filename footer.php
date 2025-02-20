@@ -46,19 +46,7 @@
                 </div>
                 <div class="col-lg-2 col-md-6 col-sm-12 footer-column">
                     <div class="footer-widget links-widget">
-                        <div class="widget-title mb_20">
-                            <h4>Resources</h4>
-                        </div>
-                        <div class="widget-content">
-                            <ul class="links-list clearfix">
-                                <li><a href="about.php">About Us</a></li>
-                                <li><a href="shop.php">Shop</a></li>
-                                <li><a href="cart.php">Cart</a></li>
-                                <li><a href="ShopDetails.php">Shop Details</a></li>
-                                <li><a href="ProductDetails.php">Products Details</a></li>
-                                <!-- <li><a href="index.php">Mobile Ap</a></li> -->
-                            </ul>
-                        </div>
+                       
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-6 col-sm-12 footer-column">
@@ -69,6 +57,7 @@
                         <div class="widget-content">
                             <ul class="links-list clearfix">
                                 <!-- <li><a href="index.php">Reviews</a></li> -->
+                                <li><a href="about.php">About Us</a></li>
                                 <li><a href="contact.php">Contact</a></li>
                                 <li><a href="return-policy.php">Return Policy</a></li>
                                 <li><a href="privacy-policy.php">Privacy Policy</a></li>
@@ -79,36 +68,26 @@
                 </div>
                 <div class="col-lg-2 col-md-6 col-sm-12 footer-column">
                     <div class="footer-widget links-widget">
-                        <div class="widget-title mb_20">
-                            <h4>Store Info</h4>
-                        </div>
-                        <div class="widget-content">
-                            <ul class="links-list clearfix">
-                                <li><a href="shop.php">Best Seller</a></li>
-                                <li><a href="shop.php">Top Sold Items</a></li>
-                                <li><a href="shop.php">New Arrivals</a></li>
-                                <li><a href="shop.php">Flash Sale</a></li>
-                                <li><a href="shop.php">Discount Products</a></li>
-                            </ul>
-                        </div>
+                       
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-6 col-sm-12 footer-column">
                     <div class="footer-widget links-widget">
                         <div class="widget-title mb_20">
-                            <h4>Categories</h4>
+                            <h4>Store Info</h4>
                         </div>
                         <div class="widget-content">
                             <ul class="links-list clearfix">
-                                <li><a href="#">Vegetables & Fruits</a></li>
-                                <li><a href="#">Cold Drinks & Juices</a></li>
-                                <li><a href="#">Bakery & Biscuits</a></li>
-                                <li><a href="#">Dry Fruits, Masala & Oil</a></li>
-                                <li><a href="#">Pharma & Wellness</a></li>
+                                <li><a href="#">Best Seller</a></li>
+                                <li><a href="#">Top Sold Items</a></li>
+                                <li><a href="#">New Arrivals</a></li>
+                                <li><a href="#">Flash Sale</a></li>
+                                <li><a href="#">Discount Products</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
+                
             </div>
         </div>
     </div>

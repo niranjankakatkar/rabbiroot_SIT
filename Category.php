@@ -140,9 +140,23 @@ $cat_id_= $_GET['i'];
                                         $cat_id= $row["id"];
                                         ?>
                                         <li>
-                                            <div class="check-box" onclick="window.location.href='Category.php?i=<?=$cat_id?>'">
-                                                <label  for="checkbox1"><?= $row['category_title'] ?> <span>(<?=retrivecount($conn,"products"," where category_id='$cat_id'")?>)</span></label>
-                                            </div>
+                                            <div  class="check-box" onclick="window.location.href='Category.php?i=<?=$cat_id?>'">
+                                                <?php
+                                                if($cat_id==$cat_id_){
+                                                    ?>
+                                                    <input type="checkbox" id="checkbox1" checked>
+                                                    <label style="color:#056839"  for="checkbox1"><b><?= $row['category_title'] ?> <span>(<?=retrivecount($conn,"products"," where category_id='$cat_id'")?>)</span></b></label>
+                                       
+                                                    <?php
+                                                }else{
+                                                    ?>
+                                                    <input type="checkbox" id="checkbox1" >
+                                                    <label  for="checkbox1"><?= $row['category_title'] ?> <span>(<?=retrivecount($conn,"products"," where category_id='$cat_id'")?>)</span></label>
+                                       
+                                                    <?php  
+                                                }
+                                                ?>
+                                                     </div>
                                         </li>
                                         <?php
                                     }

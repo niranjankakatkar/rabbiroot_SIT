@@ -15,7 +15,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
         
             ?>
            <script>
-    alert("Login Fail");
+    alert("Please enter valid credentials");
     </script>
 			
 		    <?php

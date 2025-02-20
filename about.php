@@ -1,4 +1,10 @@
+<?php
 
+include 'niru_collection.php';
+
+
+
+?>
  
 
 
@@ -159,7 +165,7 @@
                                 </div>
                             </div>
                             <div class="btn-box">
-                                <a href="about.php" class="theme-btn btn-one">Learn More <img src="public/assets/images/icons/icon-31.png" alt=""></a>
+                                <a href="index.php" class="theme-btn btn-one">Shop Now <img src="public/assets/images/icons/icon-31.png" alt=""></a>
                             </div>
                         </div>
                     </div>
@@ -265,79 +271,6 @@
         <!-- ads-style-two end -->
 
 
-        <!-- testimonial-section -->
-        <section class="testimonial-section pb_5">
-            <div class="large-container">
-                <div class="sec-title d_flex pb_20">
-                    <h2>Love from Customers</h2>
-                    <!--<a href="index-4.html">View All</a>-->
-                </div>
-                <div class="four-item-carousel owl-carousel owl-theme owl-dots-none nav-style-one">
-                    <div class="testimonial-block-one">
-                        <div class="inner-box">
-                            <figure class="thumb-box"><img src="public/assets/images/resource/testimonial-1.png" alt=""></figure>
-                            <h4>Jenny Wilson</h4>
-                            <span class="designation">Marketing Coordinator</span>
-                            <ul class="rating"> 
-                                <li><i class="icon-11"></i></li>
-                                <li><i class="icon-11"></i></li>
-                                <li><i class="icon-11"></i></li>
-                                <li><i class="icon-11"></i></li>
-                                <li class="light"><i class="icon-11"></i></li>
-                            </ul>
-                            <p>“Suspendisse est imperdiet pellentesque nulla vulputate eu pharetra pharetra massa amet ac semper et pellentesque dolor tincidunt sodales”</p>
-                        </div>
-                    </div>
-                    <div class="testimonial-block-one">
-                        <div class="inner-box">
-                            <figure class="thumb-box"><img src="public/assets/images/resource/testimonial-2.png" alt=""></figure>
-                            <h4>Robert Fox</h4>
-                            <span class="designation">Nursing Assistant</span>
-                            <ul class="rating"> 
-                                <li><i class="icon-11"></i></li>
-                                <li><i class="icon-11"></i></li>
-                                <li><i class="icon-11"></i></li>
-                                <li><i class="icon-11"></i></li>
-                                <li class="light"><i class="icon-11"></i></li>
-                            </ul>
-                            <p>“Suspendisse est imperdiet pellentesque nulla vulputate eu pharetra pharetra massa amet ac semper et pellentesque dolor tincidunt sodales”</p>
-                        </div>
-                    </div>
-                    <div class="testimonial-block-one">
-                        <div class="inner-box">
-                            <figure class="thumb-box"><img src="public/assets/images/resource/testimonial-3.png" alt=""></figure>
-                            <h4>Bessie Cooper</h4>
-                            <span class="designation">Medical Assistant</span>
-                            <ul class="rating"> 
-                                <li><i class="icon-11"></i></li>
-                                <li><i class="icon-11"></i></li>
-                                <li><i class="icon-11"></i></li>
-                                <li><i class="icon-11"></i></li>
-                                <li class="light"><i class="icon-11"></i></li>
-                            </ul>
-                            <p>“Suspendisse est imperdiet pellentesque nulla vulputate eu pharetra pharetra massa amet ac semper et pellentesque dolor tincidunt sodales”</p>
-                        </div>
-                    </div>
-                    <div class="testimonial-block-one">
-                        <div class="inner-box">
-                            <figure class="thumb-box"><img src="public/assets/images/resource/testimonial-4.png" alt=""></figure>
-                            <h4>Kathryn Murphy</h4>
-                            <span class="designation">Web Designer</span>
-                            <ul class="rating"> 
-                                <li><i class="icon-11"></i></li>
-                                <li><i class="icon-11"></i></li>
-                                <li><i class="icon-11"></i></li>
-                                <li><i class="icon-11"></i></li>
-                                <li class="light"><i class="icon-11"></i></li>
-                            </ul>
-                            <p>“Suspendisse est imperdiet pellentesque nulla vulputate eu pharetra pharetra massa amet ac semper et pellentesque dolor tincidunt sodales”</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- testimonial-section end -->
-
 
         <!-- apps-section -->
         <section class="apps-section pb_70">
@@ -365,60 +298,7 @@
         <!-- apps-section end -->
 
 
-        <!-- news-section -->
-        <section class="news-section pt_20 pb_30">
-            <div class="large-container">
-                <div class="sec-title d_flex pb_20">
-                    <h2>Latest News</h2>
-                    <!--<a href="blog.html">View All</a>-->
-                </div>
-                <div class="row clearfix">
-                    <div class="col-lg-3 col-md-6 col-sm-12 news-block">
-                        <div class="news-block-two wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
-                            <div class="inner-box">
-                                <div class="bg-layer" style="background-image: url(public/assets/images/news/news-5.jpg);"></div>
-                                <span class="sub-title">Vegetable</span>
-                                <h4><a href="blog-details.php">Why Online Grocery Shopping is Preferable than Traditional</a></h4>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12 news-block">
-                        <div class="news-block-two wow fadeInUp animated" data-wow-delay="200ms" data-wow-duration="1500ms">
-                            <div class="inner-box">
-                                <div class="bg-layer" style="background-image: url(public/assets/images/news/news-6.jpg);"></div>
-                                <span class="sub-title">Vegetable</span>
-                                <h4><a href="blog-details.php">A guide to the best food, drinks, and good times at Jackson</a></h4>
-                               
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12 news-block">
-                        <div class="news-block-two wow fadeInUp animated" data-wow-delay="400ms" data-wow-duration="1500ms">
-                            <div class="inner-box">
-                                <div class="bg-layer" style="background-image: url(public/assets/images/news/news-7.jpg);"></div>
-                                <span class="sub-title">Vegetable</span>
-                                <h4><a href="blog-details.php">Persephone is a beloved Jackson bakery cafe serving</a></h4>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12 news-block">
-                        <div class="news-block-two wow fadeInUp animated" data-wow-delay="600ms" data-wow-duration="1500ms">
-                            <div class="inner-box">
-                                <div class="bg-layer" style="background-image: url(public/assets/images/news/news-8.jpg);"></div>
-                                <span class="sub-title">Vegetable</span>
-                                <h4><a href="blog-details.php">The Million Dollar Cowboy bar is famous and rightly so</a></h4>
-                               
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- news-section end -->
-
-
+   
         
   <!-- highlights-section -->
         <section class="highlights-section alternat-2 pt-1">

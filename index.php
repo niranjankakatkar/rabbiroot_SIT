@@ -312,7 +312,7 @@ include 'niru_collection.php';
                     $result = mysqli_query($conn, $sql);
                     while ($row = mysqli_fetch_assoc($result)) {
                         ?>
-                        <div class="category-block-one">
+                        <div class="category-block-one" onclick="window.location.href='Category.php?i=<?=$row['id']?>'">
                             <div class="inner-box">
                                 <div class="image-box">
 
@@ -439,9 +439,7 @@ include 'niru_collection.php';
                                                                 class="lightbox-image" data-fancybox="gallery"><i
                                                                     class="far fa-eye"></i></a></li>
 
-                                                        <li><button type="button"><i class="icon-7"></i></button></li>
-
-                                                        <li><button type="button"><i class="icon-6"></i></button></li>
+                                                      
 
                                                     </ul>
 

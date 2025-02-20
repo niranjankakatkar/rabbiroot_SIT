@@ -94,7 +94,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
                                     	<div class="mb-2">
                                             <label for="username" class="form-label">Select Attribute Type </label>
                                            <select class="form-control" name="attribute_type_id" id="default" required>
-                                                <option value="">----Select----- </option>
+                                                <option value="">Search</option>
 												<?php
 												   $sql = "SELECT * FROM attribute_type where flag='1'";
 												   $result = mysqli_query($conn, $sql);
@@ -136,7 +136,20 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
                                            
                                         </div>
                                        
-                                        <button type="submit" class="btn btn-primary">Submit </button>
+                                          
+                                        <?php
+                                    if($url_id== "")                   
+                                    {
+                                            ?>
+                                             <button type="submit" class="btn btn-primary">Submit </button>
+                                            <?php
+                                    }else{
+                                        ?>
+                                             <button type="submit" class="btn btn-success">Update </button>
+                                            <?php
+                                    }
+
+                                       ?>
                                     </form>
                                  </div><!--end card-body--> 
                             </div><!--end card--> 

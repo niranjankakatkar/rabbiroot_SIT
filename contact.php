@@ -183,24 +183,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     <form method="post" id="contact-form">
                                         <div class="row clearfix">
                                             <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                                <label>Name <span>*</span></label>
+                                                <label>Name <span style="color:red">*</span></label>
                                                 <input type="text" name="name" id="name" placeholder="" required>
                                             </div>
                                             <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                                <label>Phone Number <span>*</span></label>
-                                                <input type="text" name="phone_no" id="phone_no" placeholder=""
+                                                <label>Phone Number <span style="color:red">*</span></label>
+                                                <input type="text" maxlength="10" name="phone_no" id="phone_no" placeholder=""
                                                     required>
                                             </div>
                                             <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                                                <label>Email Address <span>*</span></label>
+                                                <label>Email Address <span style="color:red">*</span></label>
                                                 <input type="email" name="email" id="email" placeholder="" required>
                                             </div>
                                             <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                                                <label>Subject <span>*</span></label>
+                                                <label>Subject <span style="color:red">*</span></label>
                                                 <input type="text" name="subject" id="subject" placeholder="" required>
                                             </div>
                                             <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                                                <label>Write Message <span>*</span></label>
+                                                <label>Write Message <span style="color:red">*</span></label>
                                                 <textarea name="msg" id="msg" placeholder=""></textarea>
                                             </div>
                                             <div class="col-lg-12 col-md-12 col-sm-12 form-group message-btn">

@@ -79,21 +79,6 @@ while ($row = mysqli_fetch_assoc($result)) {
                 </figure>
                 <div class="search-area" style="border: 1px solid black;">
                     <!-- Category Dropdown Section with Search Icon -->
-                    <div class="category-inner">
-                        <div class="select-box">
-                            <select class="wide">
-                                <option data-display="Select Category">Select Category</option>
-                                <option value="1">Fresh Fruits</option>
-                                <option value="4">Organic Vegetables</option>
-                                <option value="5">Eggs & Protein</option>
-                                <option value="6">Chocolate Candy</option>
-                                <option value="7">Soft Drinks</option>
-                                <option value="8">Milk & Dairy</option>
-                                <option value="9">Tea & Coffee</option>
-                                <option value="10">Snacks Item</option>
-                            </select>
-                        </div>
-                    </div>
                     <div class="search-box">
                         <form method="post" action="#">
                             <div class="form-group">

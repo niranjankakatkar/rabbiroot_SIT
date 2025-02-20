@@ -101,9 +101,7 @@ if($Dflag!=""){
                                             <thead class="table-light">
                                               <tr>
                                                 <th style="width: 16px;">
-                                                    <div class="form-check mb-0 ms-n1">
-                                                        <input type="checkbox" class="form-check-input" name="select-all" id="select-all">                                                    
-                                                    </div>
+                                                    Sr.No.
                                                 </th>
                                                 <th>Attribute Type</th>
                                                 <th>Attribute</th>
@@ -117,20 +115,18 @@ if($Dflag!=""){
 										   $sql = "SELECT * FROM attribute_type";
 										   $result = mysqli_query($conn, $sql);
 										   
-									   
+									   $i=1;
 											   while($row = mysqli_fetch_assoc($result)) {
 												   $timepstamp=$row['timestamp'];
 													$timepstamp=date_create("".$timepstamp);
 			   ?>
                                                 <tr>
                                                     <td style="width: 16px;">
-                                                        <div class="form-check">
-                                                            <input type="checkbox" class="form-check-input" name="check"  id="customCheck1">
-                                                        </div>
+                                                        <?=$i++?>
                                                     </td>
                                                     <td class="ps-0">
 													     <p class="d-inline-block align-middle mb-0">
-                                                            <a href="ecommerce-order-details.html" class="d-inline-block align-middle mb-0 product-name"><?=$row['attribute_type_title']?></a> 
+                                                            <a  class="d-inline-block align-middle mb-0 product-name"><?=$row['attribute_type_title']?></a> 
                                                             <br>
                                                             <span class="text-muted font-13"><?=$row['description']?></span> 
                                                         </p>
@@ -151,8 +147,8 @@ if($Dflag!=""){
                                                         <span><?=date_format($timepstamp,"l, d F  H:i A");?></span>
                                                     </td>
                                                     <td class="text-end">                                                       
-                                                        <a href="add.php?id=<?=$row['id']?>"><i class="las la-pen text-secondary fs-18"></i></a>
-                                                        <a href="?id=<?=$row['id']?>&Dflag=1"><i class="las la-trash-alt text-secondary fs-18"></i></a>
+                                                        <a href="add.php?id=<?=$row['id']?>"><i class="las la-pen text-secondary fs-18"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        <a onclick="return confirm('Are you sure?')" href="?id=<?=$row['id']?>&Dflag=1"><i class="las la-trash-alt text-secondary fs-18"></i></a>
 														
                                                     </td>
                                                 </tr>

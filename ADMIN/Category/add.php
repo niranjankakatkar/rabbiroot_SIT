@@ -174,8 +174,20 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
                                       
                                            
                                         </div>
+                                       <?php
+                                    if($url_id== "")                   
+                                    {
+                                            ?>
+                                             <button type="submit" class="btn btn-primary">Submit </button>
+                                            <?php
+                                    }else{
+                                        ?>
+                                             <button type="submit" class="btn btn-success">Update </button>
+                                            <?php
+                                    }
+
+                                       ?>
                                        
-                                        <button type="submit" class="btn btn-primary">Submit </button>
                                     </form><!--end form-->            
                                 </div><!--end card-body--> 
                             </div><!--end card--> 

@@ -16,12 +16,15 @@ $flag=givedata($conn,"user_master","reg_no",$token_key,"active_flag");
 if($flag!="")
 {
     ?>
-<script>window.location.href = 'user-profile.php';</script>
+
     <?php 
 	if($flag==1)
 	{  
 		$_SESSION['tokenID']=$token_key;
         echo "<script>alert('User Login Successfully.');</script>";
+        ?>
+        <script>window.location.href = 'index.php';</script>
+        <?php
 	}else{  
 		echo "Done-1"; 
 		 }
@@ -146,17 +149,17 @@ if($flag!="")
         <section class="sign-section pb_80 pt_20">
             <div class="large-container">
                 <div class="sec-title centred pb_30">
-                    <h3>Log in or Sign In</h3>
+                    <h3>Log in</h3>
                 </div>
                 <div class="form-inner">
                     <form action="login.php" autocomplete="off" method="post" accept-charset="utf-8">
                         <div class="form-group">
-                            <label>Email <span>*</span></label>
+                            <label>Email <span style="color: red;">*</span></label>
                             <input type="email" id="email"name="email" placeholder="Enter your Email" required>
                         </div>
                         <!-- Password -->
                 <div class="form-group" style="position: relative;">
-                  <label for="password">Password <span>*</span></label>
+                  <label for="password">Password <span style="color: red;">*</span></label>
                    <input type="password" id="password" name="password" placeholder="Enter your Password"  required >
                    <!-- Eye Icon -->
                    <span 

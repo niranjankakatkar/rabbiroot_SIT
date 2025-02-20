@@ -150,6 +150,7 @@ function retriveSUM($con,$tabname,$key,$cond)
 	e.g.
 		$Cust_id=retrivemax($con,"customer","Cust_id");
 */
+$vl=0;
 	$sql = "SELECT SUM($key) as vl FROM $tabname $cond"; 
 	//echo "".$sql;
     $result1=mysqli_query($con,$sql);
