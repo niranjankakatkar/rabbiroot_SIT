@@ -7,10 +7,11 @@
 
  //live
  /*
- $dbhost = "localhost";
- $dbuser = "sitsolutionsco_waves_packaging";
- $dbpass = "wavedev@2024#";
- $db = "sitsolutionsco_waves_packaging";*/
+$dbhost = "localhost";
+ $dbuser = "rabbiroots_sit";
+ $dbpass = "rabbiroot@2024#";
+ $db = "rabbiroots_admin";
+*/
 
 
  $conn = new mysqli($dbhost, $dbuser, $dbpass,$db) or die("Connect failed: %s\n". $conn -> error);

@@ -244,7 +244,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 												   <?php 
                                                     }
                                             ?>	
-                                                   <option value="">----Select----- </option>
+                                                   <option value="">Search </option>
 														<?php
 														   $sql = "SELECT * FROM sub_category where flag='1'";
 														   $result = mysqli_query($conn, $sql);
@@ -263,7 +263,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
                                         </div>
                                         <div class="mb-2">
                                             <label for="price" class="form-label">Product Price</label>
-                                            <input class="form-control" type="text" name="price" id="price" value="<?=givedata($conn,"products","id",$url_id,"price");?>" placeholder="Enter Products price" required>
+                                            <input class="form-control" type="number" name="price" id="price" value="<?=givedata($conn,"products","id",$url_id,"price");?>" placeholder="Enter Products price" required>
                                            
                                         </div>
 										<div class="mb-2">

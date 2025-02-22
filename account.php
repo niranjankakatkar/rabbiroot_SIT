@@ -5,9 +5,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from azim.hostlin.com/Hatbazar/cart.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 11:27:10 GMT -->
-
-<!-- Mirrored from rabbiroots.com/cart by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Dec 2024 10:24:36 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 <meta charset="utf-8">
@@ -353,7 +350,5 @@
 
 </body><!-- End of .page_wrapper -->
 
-<!-- Mirrored from azim.hostlin.com/Hatbazar/cart.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 11:27:12 GMT -->
 
-<!-- Mirrored from rabbiroots.com/cart by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Dec 2024 10:24:37 GMT -->
 </html>

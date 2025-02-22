@@ -25,9 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from azim.hostlin.com/Hatbazar/contact.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 11:27:35 GMT -->
 
-<!-- Mirrored from rabbiroots.com/contact by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Dec 2024 10:25:11 GMT -->
 <!-- Added by HTTrack -->
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 
@@ -112,7 +110,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link href="public/assets/css/module-css/discount.css" rel="stylesheet">
     <link href="public/assets/css/module-css/product-details.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 
 
@@ -309,8 +307,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <script src="public/assets/js/script.js"></script>
     </body><!-- End of .page_wrapper -->
 
-    <!-- Mirrored from azim.hostlin.com/Hatbazar/contact.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 11:27:36 GMT -->
-
-    <!-- Mirrored from rabbiroots.com/contact by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Dec 2024 10:25:11 GMT -->
 
 </html>

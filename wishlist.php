@@ -1,8 +1,5 @@
 <?php include 'niru_collection.php';
 
-if ($_SESSION['guesst_login_KEY'] == "") {
-    $_SESSION['guesst_login_KEY'] = '' . generateRandomString(30);
-}
 
 
 if($_SERVER['REQUEST_METHOD'] == 'POST')
@@ -19,7 +16,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 <html lang="en">
 
 
-<!-- Mirrored from rabbiroots.com/login by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Dec 2024 10:24:38 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 <meta charset="utf-8">
@@ -490,5 +486,4 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 </body>
 
 
-<!-- Mirrored from themes.pixelstrap.com/fastkart/front-end/wishlist.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Dec 2024 06:36:31 GMT -->
 </html>

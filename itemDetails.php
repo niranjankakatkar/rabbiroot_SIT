@@ -7,9 +7,6 @@ $pid=$_GET['i'];
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from azim.hostlin.com/Hatbazar/https://rabbiroots.com/ShopDetails by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 11:25:39 GMT -->
-
-<!-- Mirrored from rabbiroots.com/ShopDetails by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Dec 2024 10:24:30 GMT -->
 <!-- Added by HTTrack -->
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 
@@ -86,7 +83,7 @@ $pid=$_GET['i'];
     <link href="public/assets/css/module-css/discount.css" rel="stylesheet">
     <link href="public/assets/css/module-css/product-details.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 
 
@@ -118,7 +115,7 @@ $pid=$_GET['i'];
                                                 <!-- Main Large Image -->
                                                 <div class="image-box">
                                                     <figure class="image">
-                                                        <img id="mainImage"
+                                                        <img id="mainImage" style="height:500px;" 
                                                             src="ADMIN//<?=givedata($conn,"products","p_key",$pid,"filepath")?>"
                                                             alt="Main Image">
                                                     </figure>
@@ -132,7 +129,7 @@ $pid=$_GET['i'];
                                                             <a href="ADMIN//<?=givedata($conn,"products","p_key",$pid,"filepath")?>"
                                                                 onclick="document.getElementById('mainImage').src=this.href; return false;">
                                                                 <figure>
-                                                                    <img src="ADMIN//<?=givedata($conn,"products","p_key",$pid,"filepath")?>"
+                                                                    <img style="height:150px;" src="ADMIN//<?=givedata($conn,"products","p_key",$pid,"filepath")?>"
                                                             
                                                                         alt="Thumbnail 1">
                                                                 </figure>
@@ -142,7 +139,7 @@ $pid=$_GET['i'];
                                                             <a href="ADMIN//<?=givedata($conn,"products","p_key",$pid,"filepath_1")?>"
                                                                 onclick="document.getElementById('mainImage').src=this.href; return false;">
                                                                 <figure>
-                                                                    <img src="ADMIN//<?=givedata($conn,"products","p_key",$pid,"filepath_1")?>"
+                                                                    <img style="height:150px;" src="ADMIN//<?=givedata($conn,"products","p_key",$pid,"filepath_1")?>"
                                                                         alt="Thumbnail 2">
                                                                 </figure>
                                                             </a>
@@ -151,7 +148,7 @@ $pid=$_GET['i'];
                                                             <a href="ADMIN//<?=givedata($conn,"products","p_key",$pid,"filepath_2")?>"
                                                                 onclick="document.getElementById('mainImage').src=this.href; return false;">
                                                                 <figure>
-                                                                    <img src="ADMIN//<?=givedata($conn,"products","p_key",$pid,"filepath_2")?>"
+                                                                    <img style="height:150px;" src="ADMIN//<?=givedata($conn,"products","p_key",$pid,"filepath_2")?>"
                                                                         alt="Thumbnail 3">
                                                                 </figure>
                                                             </a>
@@ -160,7 +157,7 @@ $pid=$_GET['i'];
                                                             <a href="ADMIN//<?=givedata($conn,"products","p_key",$pid,"filepath_3")?>"
                                                                 onclick="document.getElementById('mainImage').src=this.href; return false;">
                                                                 <figure>
-                                                                    <img src="ADMIN//<?=givedata($conn,"products","p_key",$pid,"filepath_3")?>"
+                                                                    <img style="height:150px;" src="ADMIN//<?=givedata($conn,"products","p_key",$pid,"filepath_3")?>"
                                                                         alt="Thumbnail 4">
                                                                 </figure>
                                                             </a>
@@ -501,8 +498,6 @@ $pid=$_GET['i'];
 
     </body><!-- End of .page_wrapper -->
 
-    <!-- Mirrored from azim.hostlin.com/Hatbazar/https://rabbiroots.com/ShopDetails by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 11:25:59 GMT -->
-
-    <!-- Mirrored from rabbiroots.com/ShopDetails by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Dec 2024 10:24:35 GMT -->
+ 
 
 </html>

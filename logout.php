@@ -1,4 +1,5 @@
-<?php include 'niru_collection.php';
+<?php 
+include 'niru_collection.php';
 
 session_start(); 
  session_unset(); 

@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $pincode = $_POST['pincode'];
 
 
-
+$uid=givedata($conn,"address_master","user_token_id",$user_token_id,"id");
 if($uid=="")
 	{
 		$sql="INSERT INTO address_master(user_token_id,address,country,city,state,pincode,flag) VALUES('$user_token_id','$address','$country','$city','$state','$pincode','1')";
@@ -25,7 +25,7 @@ if($uid=="")
 		  <?php
 		}
 	}else{
-		$sql="UPDATE address_master set address='$address',country='$country',city='$city',state='$state',pincode='$pincode',flag='$flag' where id='$user_token_id'";
+		$sql="UPDATE address_master set address='$address',country='$country',city='$city',state='$state',pincode='$pincode',flag='$flag' where user_token_id='$user_token_id'";
 		if($conn->query($sql))
         {
             ?>		  
@@ -45,9 +45,6 @@ if($uid=="")
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from azim.hostlin.com/Hatbazar/https://rabbiroots.com/ShopDetails by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 11:25:39 GMT -->
-
-<!-- Mirrored from rabbiroots.com/ShopDetails by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Dec 2024 10:24:30 GMT -->
 <!-- Added by HTTrack -->
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 
@@ -124,7 +121,7 @@ if($uid=="")
     <link href="public/assets/css/module-css/discount.css" rel="stylesheet">
     <link href="public/assets/css/module-css/product-details.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 
     <style>
@@ -208,11 +205,7 @@ if($uid=="")
                                             <i class="fas fa-shopping-bag"></i> My Orders
                                         </a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link text-dark" data-bs-toggle="pill" href="#giftcards">
-                                            <i class="fas fa-gift"></i> E-Gift Cards
-                                        </a>
-                                    </li>
+                                   
                                     <li class="nav-item">
                                         <a class="nav-link text-dark " data-bs-toggle="pill" href="#privacy">
                                             <i class="fas fa-lock"></i> Account privacy
@@ -235,8 +228,20 @@ if($uid=="")
                                     <div class="tab-pane fade show active" id="addresses">
                                         <h4>My Addresses</h4>
                                         <!-- Button to add new address -->
-                                        <button class="btn btn-primary mb-3" data-bs-toggle="collapse"
-                                            data-bs-target="#addAddressForm">Add New Address</button>
+                                       
+                                        <?php
+                                        $uid=givedata($conn,"address_master","user_token_id",$user_token_id,"id");
+                                        if($uid=="")
+                                        {
+                                            ?>
+                                            <button class="btn btn-primary mb-3" data-bs-toggle="collapse" data-bs-target="#addAddressForm">Add New Address</button>
+                                            <?php
+                                        }else{
+                                            ?>
+                                            <button class="btn btn-primary mb-3" data-bs-toggle="collapse" data-bs-target="#addAddressForm">Update Address</button>
+                                            <?php  
+                                        }
+                                           ?>  
 
                                         <!-- Address Form (visible on clicking "Add New Address") -->
                                         <div class="collapse" id="addAddressForm">
@@ -244,13 +249,13 @@ if($uid=="")
                                                 <div class="row">
                                                     <div class="col-lg-6 mb-3">
                                                         <label for="houseNo" class="form-label">Address</label>
-                                                        <input type="text" class="form-control" name="address" id="address" 
+                                                        <input type="text" class="form-control" value="<?= givedata($conn, "address_master", "user_token_id", $user_token_id, "address"); ?>" name="address" id="address" 
                                                             placeholder="Enter Address" required>
                                                     </div>
                                                     
                                                     <div class="col-lg-6 mb-3">
                                                         <label for="pincode" class="form-label">Pincode</label>
-                                                        <input type="text" class="form-control" name="pincode" id="pincode" 
+                                                        <input type="text" class="form-control" value="<?= givedata($conn, "address_master", "user_token_id", $user_token_id, "pincode"); ?>" name="pincode" id="pincode" 
                                                             placeholder="Enter Pincode" required>
                                                     </div>
                                                 
@@ -259,17 +264,29 @@ if($uid=="")
                                                 <div class="row">
                                                     <div class="col-lg-6 mb-3">
                                                         <label for="city" class="form-label">City</label>
-                                                        <input type="text" class="form-control" name="city" id="city"
+                                                        <input type="text" class="form-control" value="<?= givedata($conn, "address_master", "user_token_id", $user_token_id, "city"); ?>" name="city" id="city"
                                                             placeholder="Enter City" required>
                                                     </div>
                                                     <div class="col-lg-6 mb-3">
                                                         <label for="state" class="form-label">State</label>
-                                                        <input type="text" class="form-control" name="state" id="state"
+                                                        <input type="text" class="form-control" value="<?= givedata($conn, "address_master", "user_token_id", $user_token_id, "state"); ?>" name="state" id="state"
                                                             placeholder="Enter State" required>
                                                     </div>
                                                 </div>
-                                               
-                                                <button type="submit" class="btn btn-success mt-3">Save Address</button>
+                                                <?php
+                                        $uid=givedata($conn,"address_master","user_token_id",$user_token_id,"id");
+                                        if($uid=="")
+                                        {
+                                            ?>
+                                           <button type="submit" class="btn btn-success mt-3">Save Address</button>
+                                            <?php
+                                        }else{
+                                            ?>
+                                           <button type="submit" class="btn btn-success mt-3">Update Address</button>
+                                            <?php  
+                                        }
+                                           ?>  
+                                                
                                             </form>
 
                                         </div>
@@ -283,10 +300,10 @@ if($uid=="")
                                                     <i class="fa-solid fa-house-circle-exclamation fa-1x me-2"></i>
                                                     <div>
                                                         <h6 class="mb-0">Home</h6>
-                                                        <b>Address: </b><p class="mb-0"><?= givedata($conn, "address_master", "user_token_id", $user_token_id, "address"); ?></p>
-                                                        <b>City: </b><p class="mb-0"><?= givedata($conn, "address_master", "user_token_id", $user_token_id, "city"); ?></p>
-                                                        <b>State: </b><p class="mb-0"><?= givedata($conn, "address_master", "user_token_id", $user_token_id, "state"); ?></p>
-                                                        <b>Pincode: </b><p class="mb-0"><?= givedata($conn, "address_master", "user_token_id", $user_token_id, "pincode"); ?></p>
+                                                        <p class="mb-0"> <b>Address: </b><?= givedata($conn, "address_master", "user_token_id", $user_token_id, "address"); ?></p>
+                                                        <p class="mb-0"></p><b>City: </b><?= givedata($conn, "address_master", "user_token_id", $user_token_id, "city"); ?></p>
+                                                        <p class="mb-0"></p><b>State: </b><?= givedata($conn, "address_master", "user_token_id", $user_token_id, "state"); ?></p>
+                                                        <p class="mb-0"></p><b>Pincode: </b><?= givedata($conn, "address_master", "user_token_id", $user_token_id, "pincode"); ?></p>
                                                     </div>
                                                 </div>
                                                 <div>
@@ -310,7 +327,7 @@ if($uid=="")
                                     <!-- Account Privacy Tab Content -->
                                     <div class="tab-pane fade " id="privacy">
                                             <h4>Account Privacy and Policy</h4>
-                                            <p class="text-muted">We, i.e. "Blink Commerce Private Limited", are committed
+                                            <p class="text-muted">We, i.e. "RabbiRoot.com", are committed
                                                 to protecting the privacy and security of your personal information. Your
                                                 privacy is important to us and maintaining your trust is paramount.</p>
                                             <p class="text-muted">This privacy policy explains how we collect, use, process,
@@ -318,7 +335,7 @@ if($uid=="")
                                                 affiliated services, you consent to the terms of our privacy policy
                                                 (“Privacy Policy”) in addition to our ‘Terms of Use.’</p>
                                             <p class="text-muted">For clarifications regarding this privacy policy, please
-                                                write to us at info@blinkit.com</p>
+                                                write to us at info@rabbiroot.com</p>
                                             
                                             <!-- Delete Account Section -->
                                             <div class="delete-box mt-3">
@@ -422,8 +439,6 @@ if($uid=="")
            
     </body><!-- End of .page_wrapper -->
 
-    <!-- Mirrored from azim.hostlin.com/Hatbazar/https://rabbiroots.com/ShopDetails by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 11:25:59 GMT -->
-
-    <!-- Mirrored from rabbiroots.com/ShopDetails by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Dec 2024 10:24:35 GMT -->
+   
 
 </html>

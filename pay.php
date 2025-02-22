@@ -15,7 +15,7 @@
         $easebuzzObj = new Easebuzz($MERCHANT_KEY, $SALT, $ENV);
         
          // Use date default function to India time zore for save txns date
-        date_default_timezone_set("Asia/Kolkata");
+      //  date_default_timezone_set("Asia/Kolkata");
 
         // Generate txns Id by using mt_rand function
         $transactionId = substr(str_shuffle(md5(time())),0, 15);

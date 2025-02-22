@@ -8,9 +8,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from azim.hostlin.com/Hatbazar/contact.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 11:27:35 GMT -->
 
-<!-- Mirrored from rabbiroots.com/contact by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Dec 2024 10:25:11 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 <meta charset="utf-8">
@@ -149,7 +147,7 @@
             <div class="inner-box">
 
                 <div class="icon-box"><img
-                        src="https://rabbiroots.com//public/assets/images/icons/icon-20.png" alt="">
+                        src="public/assets/images/icons/icon-20.png" alt="">
                 </div>
 
                 <h5>Same day Product Delivery</h5>
@@ -163,7 +161,7 @@
             <div class="inner-box">
 
                 <div class="icon-box"><img
-                        src="https://rabbiroots.com//public/assets/images/icons/icon-21.png" alt="">
+                        src="public/assets/images/icons/icon-21.png" alt="">
                 </div>
 
                 <h5>100% Customer Satisfaction</h5>
@@ -177,7 +175,7 @@
             <div class="inner-box">
 
                 <div class="icon-box"><img
-                        src="https://rabbiroots.com//public/assets/images/icons/icon-22.png" alt="">
+                        src="public/assets/images/icons/icon-22.png" alt="">
                 </div>
 
                 <h5>Help and access is our mission</h5>
@@ -191,7 +189,7 @@
             <div class="inner-box">
 
                 <div class="icon-box"><img
-                        src="https://rabbiroots.com//public/assets/images/icons/icon-23.png" alt="">
+                        src="public/assets/images/icons/icon-23.png" alt="">
                 </div>
 
                 <h5>100% quality Car Accessories</h5>
@@ -205,7 +203,7 @@
             <div class="inner-box">
 
                 <div class="icon-box"><img
-                        src="https://rabbiroots.com//public/assets/images/icons/icon-24.png" alt="">
+                        src="public/assets/images/icons/icon-24.png" alt="">
                 </div>
 
                 <h5>24/7 Support for Clients</h5>

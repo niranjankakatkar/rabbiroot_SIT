@@ -27,7 +27,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html lang="en">
 
 
-<!-- Mirrored from rabbiroots.com/login by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Dec 2024 10:24:38 GMT -->
 <!-- Added by HTTrack -->
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 
@@ -106,7 +105,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link href="public/assets/css/module-css/discount.css" rel="stylesheet">
     <link href="public/assets/css/module-css/product-details.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 
 
@@ -298,8 +297,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     </body><!-- End of .page_wrapper -->
 
-    <!-- Mirrored from azim.hostlin.com/Hatbazar/login.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 11:27:23 GMT -->
-
-    <!-- Mirrored from rabbiroots.com/login by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Dec 2024 10:24:38 GMT -->
 
 </html>

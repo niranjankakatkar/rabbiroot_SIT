@@ -1,6 +1,6 @@
 <?php
-session_start();
-include 'db_config.php';
+
+
 
 // print_r($_SESSION);die;
 
@@ -163,17 +163,18 @@ $subtotal=0;
                                     </li>
 
                                     <?php
+                                    
                                         if($_SESSION['tokenID']=="")
                                         {
                                             ?>
-                                            <li><a href="login.php"><i class="icon-17"></i>Login</a></li>
+                                            <li><a href="login.php"><i class="icon-17"></i> Login</a></li>
                                             <?php
                                         }
                                         else
                                         {
                                             $reg=$_SESSION['tokenID'];
                                             ?>
-                                            <li><a><i class="icon-17"></i><?=givedata($conn,"user_master","reg_no",$reg,"name")?></a></li>
+                                            <li><a href="user-profile.php"><i class="icon-17"></i> <?=givedata($conn,"user_master","reg_no",$reg,"name")?></a></li>
                                             <?php
                                         }
                                     ?>
@@ -200,21 +201,7 @@ $subtotal=0;
                             </figure>
                             <div class="search-area" style="border: 1px solid black;">
                                 <!-- Category Dropdown Section with Search Icon -->
-                                <div class="category-inner">
-                                    <div class="select-box">
-                                        <select class="wide">
-                                            <option data-display="Select Category">Select Category</option>
-                                            <option value="1">Fresh Fruits</option>
-                                            <option value="4">Organic Vegetables</option>
-                                            <option value="5">Eggs & Protein</option>
-                                            <option value="6">Chocolate Candy</option>
-                                            <option value="7">Soft Drinks</option>
-                                            <option value="8">Milk & Dairy</option>
-                                            <option value="9">Tea & Coffee</option>
-                                            <option value="10">Snacks Item</option>
-                                        </select>
-                                    </div>
-                                </div>
+                               
                                 <div class="search-box">
                                     <form method="post" action="https://azim.hostlin.com/Hatbazar/shop.php">
                                         <div class="form-group">
@@ -310,17 +297,18 @@ $subtotal=0;
                                     </li>
 
                                     <?php
+                                    
                                         if($_SESSION['tokenID']=="")
                                         {
                                             ?>
-                                            <li><a href="login.php"><i class="icon-17"></i>Login</a></li>
+                                            <li><a href="login.php"><i class="icon-17"></i> Login</a></li>
                                             <?php
                                         }
                                         else
                                         {
                                             $reg=$_SESSION['tokenID'];
                                             ?>
-                                            <li><a><i class="icon-17"></i><?=givedata($conn,"user_master","reg_no",$reg,"name")?></a></li>
+                                            <li><a><i class="icon-17"></i> <?=givedata($conn,"user_master","reg_no",$reg,"name")?></a></li>
                                             <?php
                                         }
                                     ?>

@@ -1,6 +1,6 @@
 <?php
 session_start();
-date_default_timezone_set('Asia/Calcutta');
+//date_default_timezone_set('Asia/Calcutta');
 include 'db_config.php';
 //include 'hr_funlist.php';
 //$inityr=$_SESSION[inityr];

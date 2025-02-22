@@ -11,7 +11,7 @@ include 'niru_collection.php';
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from rabbiroots.com/about by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Dec 2024 10:25:06 GMT -->
+
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 <meta charset="utf-8">
@@ -375,7 +375,4 @@ include 'niru_collection.php';
     <script src="public/assets/js/script.js"></script>
 
 </body>
-<!-- Mirrored from azim.hostlin.com/Hatbazar/https://rabbiroots.com/about by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 11:27:22 GMT -->
-
-<!-- Mirrored from rabbiroots.com/about by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Dec 2024 10:25:11 GMT -->
 </html>

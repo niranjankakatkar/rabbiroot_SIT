@@ -87,7 +87,7 @@ include 'niru_collection.php';
     <link href="public/assets/css/module-css/discount.css" rel="stylesheet">
     <link href="public/assets/css/module-css/product-details.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 
 </head>
@@ -195,22 +195,22 @@ include 'niru_collection.php';
                     <div class="parallax-scene parallax-scene-3">
 
                         <span data-depth="0.40" class="parallax-layer"
-                            style="background-image: url(https://rabbiroots.com/public/assets/images/shape/shape-8.png);"></span>
+                            style="background-image: url(public/assets/images/shape/shape-8.png);"></span>
 
                     </div>
 
                     <div class="shape"
-                        style="background-image: url(https://rabbiroots.com/public/assets/images/shape/shape-9.png);">
+                        style="background-image: url(public/assets/images/shape/shape-9.png);">
                     </div>
 
                     <div class="image-layer">
 
                         <figure class="image p_absolute b_30 l_0" data-parallax='{"x": -100}'><img
-                                src="https://rabbiroots.com/public/assets/images/resource/cta-1.png" alt="">
+                                src="public/assets/images/resource/cta-1.png" alt="">
                         </figure>
 
                         <figure class="image p_absolute b_0 r_60" data-parallax='{"x": 100}'><img
-                                src="https://rabbiroots.com/public/assets/images/resource/cta-2.png" alt="">
+                                src="public/assets/images/resource/cta-2.png" alt="">
                         </figure>
 
                     </div>
@@ -251,7 +251,7 @@ include 'niru_collection.php';
                                 <span class="text">Featured</span>
                                 <h2>Fresh Fruits</h2>
                                 <h4><span>From</span> <i class="fa-solid fa-indian-rupee-sign"></i>05.99</h4>
-                                <a href="ShopDetails.php" class="theme-btn btn-two">Shop Now</a>
+                                <a href="#" class="theme-btn btn-two">Shop Now</a>
                             </div>
                         </div>
                     </div>
@@ -267,7 +267,7 @@ include 'niru_collection.php';
                                 <span class="text">Featured</span>
                                 <h2>Garden’s Lemon</h2>
                                 <h4><span>From</span> <i class="fa-solid fa-indian-rupee-sign"></i>04.99</h4>
-                                <a href="ShopDetails.php" class="theme-btn btn-two">Shop Now</a>
+                                <a href="#" class="theme-btn btn-two">Shop Now</a>
                             </div>
                         </div>
                     </div>
@@ -283,7 +283,7 @@ include 'niru_collection.php';
                                 <span class="text">Featured</span>
                                 <h2>Organic Fruits</h2>
                                 <h4><span>From</span> <i class="fa-solid fa-indian-rupee-sign"></i>06.99</h4>
-                                <a href="ShopDetails.php" class="theme-btn btn-two">Shop Now</a>
+                                <a href="#" class="theme-btn btn-two">Shop Now</a>
                             </div>
                         </div>
                     </div>
@@ -316,7 +316,7 @@ include 'niru_collection.php';
                             <div class="inner-box">
                                 <div class="image-box">
 
-                                    <figure class="overlay-image"><img src="ADMIN//<?= $row['filepath'] ?>" alt=""></figure>
+                                    <figure class="overlay-image" style="height:100px"><img style="height:100px" src="ADMIN//<?= $row['filepath'] ?>" alt=""></figure>
                                 </div>
                                 <h6><a href="PRODUCT-LIST/"><?= $row['category_title'] ?></a></h6>
 
@@ -435,7 +435,7 @@ include 'niru_collection.php';
 
                                                     <ul class="option-list t_20 r_20">
 
-                                                        <li><a href="https://rabbiroots.com/public/assets/images/fruits/drink-1.avif"
+                                                        <li><a href="public/assets/images/fruits/drink-1.avif"
                                                                 class="lightbox-image" data-fancybox="gallery"><i
                                                                     class="far fa-eye"></i></a></li>
 
@@ -443,7 +443,7 @@ include 'niru_collection.php';
 
                                                     </ul>
 
-                                                    <figure class="image"><img
+                                                    <figure class="image" style="height:200px"><img style="height:200px" 
                                                             src="ADMIN//<?= $row['filepath'] ?>"
                                                             alt=""></figure>
 
@@ -529,7 +529,7 @@ include 'niru_collection.php';
 
                                                         <ul class="option-list t_20 r_20">
 
-                                                            <li><a href="https://rabbiroots.com/public/assets/images/shop/shop-8.png"
+                                                            <li><a href="public/assets/images/shop/shop-8.png"
                                                                     class="lightbox-image" data-fancybox="gallery"><i
                                                                         class="far fa-eye"></i></a></li>
 
@@ -549,7 +549,7 @@ include 'niru_collection.php';
 
                                                         <!--<span class="text">Hybrid Tamato</span>-->
 
-                                                        <h4><a href="ShopDetails.php"><?= $row_['product_title'] ?></a></h4>
+                                                        <h4><a href="#"><?= $row_['product_title'] ?></a></h4>
 
                                                         <h5<i class="fa-solid fa-indian-rupee-sign"></i><?= $row_['price'] ?><br></h5>
 
@@ -633,17 +633,17 @@ include 'niru_collection.php';
                 <div class="inner-container">
 
                     <div class="pattern-layer"
-                        style="background-image: url(https://rabbiroots.com/public/assets/images/shape/shape-10.png);">
+                        style="background-image: url(public/assets/images/shape/shape-10.png);">
                     </div>
 
                     <div class="image-layer">
 
                         <figure class="image p_absolute t_0 l_25" data-parallax='{"x": -100}'><img
-                                src="https://rabbiroots.com/public/assets/images/resource/cta-3.png" alt="">
+                                src="public/assets/images/resource/cta-3.png" alt="">
                         </figure>
 
                         <figure class="image p_absolute t_0 r_25" data-parallax='{"x": 100}'><img
-                                src="https://rabbiroots.com/public/assets/images/resource/cta-4.png" alt="">
+                                src="public/assets/images/resource/cta-4.png" alt="">
                         </figure>
 
                     </div>
@@ -702,7 +702,7 @@ include 'niru_collection.php';
                         <div class="inner-box">
 
                             <div class="icon-box"><img
-                                    src="https://rabbiroots.com//public/assets/images/icons/icon-20.png" alt="">
+                                    src="public/assets/images/icons/icon-20.png" alt="">
                             </div>
 
                             <h5>Same day Product Delivery</h5>
@@ -716,7 +716,7 @@ include 'niru_collection.php';
                         <div class="inner-box">
 
                             <div class="icon-box"><img
-                                    src="https://rabbiroots.com//public/assets/images/icons/icon-21.png" alt="">
+                                    src="public/assets/images/icons/icon-21.png" alt="">
                             </div>
 
                             <h5>100% Customer Satisfaction</h5>
@@ -730,7 +730,7 @@ include 'niru_collection.php';
                         <div class="inner-box">
 
                             <div class="icon-box"><img
-                                    src="https://rabbiroots.com//public/assets/images/icons/icon-22.png" alt="">
+                                    src="public/assets/images/icons/icon-22.png" alt="">
                             </div>
 
                             <h5>Help and access is our mission</h5>
@@ -744,7 +744,7 @@ include 'niru_collection.php';
                         <div class="inner-box">
 
                             <div class="icon-box"><img
-                                    src="https://rabbiroots.com//public/assets/images/icons/icon-23.png" alt="">
+                                    src="public/assets/images/icons/icon-23.png" alt="">
                             </div>
 
                             <h5>100% quality Car Accessories</h5>
@@ -758,7 +758,7 @@ include 'niru_collection.php';
                         <div class="inner-box">
 
                             <div class="icon-box"><img
-                                    src="https://rabbiroots.com//public/assets/images/icons/icon-24.png" alt="">
+                                    src="public/assets/images/icons/icon-24.png" alt="">
                             </div>
 
                             <h5>24/7 Support for Clients</h5>
@@ -784,45 +784,45 @@ include 'niru_collection.php';
 
     <!-- jequery plugins -->
 
-    <script src="https://rabbiroots.com/public/assets/js/jquery.js"></script>
+    <script src="public/assets/js/jquery.js"></script>
 
-    <script src="https://rabbiroots.com/public/assets/js/bootstrap.min.js"></script>
+    <script src="public/assets/js/bootstrap.min.js"></script>
 
-    <script src="https://rabbiroots.com/public/assets/js/owl.js"></script>
+    <script src="public/assets/js/owl.js"></script>
 
-    <script src="https://rabbiroots.com/public/assets/js/wow.js"></script>
+    <script src="public/assets/js/wow.js"></script>
 
-    <script src="https://rabbiroots.com/public/assets/js/validation.js"></script>
+    <script src="public/assets/js/validation.js"></script>
 
-    <script src="https://rabbiroots.com/public/assets/js/jquery.fancybox.js"></script>
+    <script src="public/assets/js/jquery.fancybox.js"></script>
 
-    <script src="https://rabbiroots.com/public/assets/js/appear.js"></script>
+    <script src="public/assets/js/appear.js"></script>
 
-    <script src="https://rabbiroots.com/public/assets/js/isotope.js"></script>
+    <script src="public/assets/js/isotope.js"></script>
 
-    <script src="https://rabbiroots.com/public/assets/js/parallax-scroll.js"></script>
+    <script src="public/assets/js/parallax-scroll.js"></script>
 
-    <script src="https://rabbiroots.com/public/assets/js/jquery.nice-select.min.js"></script>
+    <script src="public/assets/js/jquery.nice-select.min.js"></script>
 
-    <script src="https://rabbiroots.com/public/assets/js/scrolltop.min.js"></script>
+    <script src="public/assets/js/scrolltop.min.js"></script>
 
-    <script src="https://rabbiroots.com/public/assets/js/language.js"></script>
+    <script src="public/assets/js/language.js"></script>
 
-    <script src="https://rabbiroots.com/public/assets/js/countdown.js"></script>
+    <script src="public/assets/js/countdown.js"></script>
 
-    <script src="https://rabbiroots.com/public/assets/js/jquery-ui.js"></script>
+    <script src="public/assets/js/jquery-ui.js"></script>
 
-    <script src="https://rabbiroots.com/public/assets/js/parallax.min.js"></script>
+    <script src="public/assets/js/parallax.min.js"></script>
 
-    <script src="https://rabbiroots.com/public/assets/js/jquery.bootstrap-touchspin.js"></script>
+    <script src="public/assets/js/jquery.bootstrap-touchspin.js"></script>
 
-    <script src="https://rabbiroots.com/public/assets/js/countdown.js"></script>
+    <script src="public/assets/js/countdown.js"></script>
 
 
 
     <!-- main-js -->
 
-    <script src="https://rabbiroots.com/public/assets/js/script.js"></script>
+    <script src="public/assets/js/script.js"></script>
 
 <script>
     
